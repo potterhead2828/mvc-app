@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar color="secondary"> 
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    
+         
+        </button>
+    <ion-title>
+            <p style="font-weight: bold; font-size:20px;font-size:20px;">Pagos</p>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+<ion-card>
+  <ion-card-content>
+   <p style=" font-size:15px;font-size:18px; color:green">
+     <ion-icon name="add-circle" large></ion-icon> Saldo a favor: BsF:_{{SaldoAFavor}}</p>
+   <br>
+   <p style=" font-size:15px;font-size:18px; color:red">
+  <ion-icon name="remove-circle" large></ion-icon> Saldo deudor:BsF:_{{SaldoDeudor}}</p>
+  </ion-card-content>
+</ion-card>  
+<ion-card>
+  <ion-card-content>
+       <div padding>
+      <button ion-button color="primary" block (click)="irARegistro()">Registrar pago</button>
+    </div>
+      <div padding>
+      <button ion-button color="primary" block (click)="irAHistorial()">Ver historial de pagos</button>
+    </div>
+     <div padding>
+      <button ion-button color="primary" block (click)="irALista()">Ver recibos pendientes</button>
+    </div>
+     <div padding>
+      <button ion-button color="primary" block (click)="irALista()">Ver recibos pagados</button>
+    </div>
+  </ion-card-content>
+</ion-card>  
+
+
+</ion-content>
+

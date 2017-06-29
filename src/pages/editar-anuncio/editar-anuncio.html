@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar color="primary"> 
+    <button ion-button (click)="irHomePropietario()">
+       <p style="font-weight: bold; font-size:15px;font-size:15px;">Cerrar modo Administrador</p>
+    </button>
+
+           
+  </ion-navbar>
+</ion-header>
+<style>
+
+textarea{
+	height:200px;	
+}
+</style>
+
+<ion-content padding>
+
+
+
+
+
+<ion-tabs>
+    <ion-tab [root]="modificarCarteleraRoot" tabTitle="Modificar cartelera" tabIcon="calendar"></ion-tab>
+    <ion-tab [root]="administrarPagosRoot" tabTitle="Administrar pagos" tabIcon="cash"></ion-tab>
+    <ion-tab [root]="escribirAPropietarioRoot" tabTitle="Escribir a propietario" tabIcon="chatboxes"></ion-tab>
+    <ion-tab [root]="activarConsultaRoot" tabTitle="Activar consulta" tabIcon="clipboard"></ion-tab>
+</ion-tabs>
+
+
+<ion-list>
+
+      <ion-item>
+        <ion-label floating>Titulo</ion-label>
+        <ion-input type="text" placeholder={{anuncio.titulo}} [(ngModel)]="anuncio.titulo"></ion-input>
+      </ion-item>
+         <ion-item>
+        <ion-label floating>Texto</ion-label>
+        <ion-textarea elastic type="text"[(ngModel)]="anuncio.texto">{{anuncio.texto}}</ion-textarea>
+      </ion-item>
+    </ion-list>
+
+    <div padding>
+      <button ion-button color="primary" block (click)="publicarCambios()">publicar cambios</button>
+    </div>
+ 
+ 
+
+
+ 
+ 
+</ion-content>
+

@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar color="secondary"> 
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    
+         
+        </button>
+    <ion-title>
+            <p style="font-weight: bold; font-size:20px;font-size:20px;">Enviar Mensaje</p>
+    </ion-title>
+      </ion-navbar>
+</ion-header>
+<style>
+
+textarea{
+	height:200px;	
+}
+</style>
+
+<ion-content padding>
+
+
+<div text-center style="margin-top: 50px;">
+
+	<!-- <ion-icon name="heart" style="font-size: 100px; color: #ebedef;" > </ion-icon> -->
+ 
+
+</div>
+
+
+
+ <ion-list>
+
+      <ion-item>
+        <ion-label floating>Asunto</ion-label>
+        <ion-input type="text" value=""[(ngModel)]="asunto"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Mensaje</ion-label>
+        <ion-textarea elastic type="text"[(ngModel)]="mensaje" ></ion-textarea>
+      </ion-item>
+
+    </ion-list>
+
+    <div padding>
+      <button ion-button color="primary" block (click)="enviarMensaje()">Enviar</button>
+    </div>
+ 
+ 
+</ion-content>
+

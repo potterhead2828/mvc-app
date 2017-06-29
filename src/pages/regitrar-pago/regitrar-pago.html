@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar color="secondary"> 
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    
+         
+        </button>
+    <ion-title>
+            <p style="font-weight: bold; font-size:20px;font-size:20px;">Registar Pago</p>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+<ion-list>
+
+  <ion-item>
+    <ion-label floating>Monto</ion-label>
+    <ion-input type="text" [(ngModel)]="monto" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Banco</ion-label>
+    <ion-select [(ngModel)]="banco">
+      <ion-option >Banesco</ion-option>
+      <ion-option >Provincial</ion-option>
+      <ion-option>Mercantil</ion-option>
+      <ion-option>B.O.D</ion-option>
+      <ion-option>Venezuela</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Forma de pago</ion-label>
+    <ion-select [(ngModel)]="formaPago">
+      <ion-option>Deposito</ion-option>
+      <ion-option>Transferencia</ion-option>
+    </ion-select>
+  </ion-item>
+   <ion-item>
+    <ion-label floating>Nro de recibo</ion-label>
+    <ion-input type="text" [(ngModel)]="nroRecibo"></ion-input>
+  </ion-item>
+  
+   <div padding>
+      <button ion-button color="primary" block (click)="registrarPago()">Registrar pago</button>
+    </div>
+</ion-list>
+
+
+</ion-content>
+

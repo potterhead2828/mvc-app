@@ -1,14 +1,36 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="secondary"> 
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    
+         
+        </button>
     <ion-title>
-      Ionic Blank
+            <p style="font-weight: bold; font-size:20px;font-size:20px;">Comunidapp</p>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding >
+  <ion-card>
+  <ion-card-content>
+    <b style="font-weight: bold; font-size:19px;font-size:15px; color:blue">Recibo mes de Mayo:_</b>
+    <p style="font-weight: bold; font-size:18px;font-size:18px; color:red">         Bsf.376800</p>
+    <button ion-button icon-left>
+  <ion-icon name="card"></ion-icon>
+  Registrar pago
+</button>
+  </ion-card-content>  
+  </ion-card>
+
+   <ion-list-header color="danger">
+    Ultimos Anuncios en Cartelera
+  </ion-list-header> 
+<ion-list no-lines>
+  <button ion-item *ngFor="let anuncio of anuncios" (click)="verAnuncio(anuncio.id)">
+    <p style="font-weight: bold; font-size:10px;font-size:15px; color:darkred">#{{anuncio.titulo}}</p>
+  </button> 
+</ion-list>
+
+
 </ion-content>

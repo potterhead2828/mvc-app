@@ -1,0 +1,82 @@
+EnviarMensajePage {
+
+body {
+  cursor: url('http://ionicframework.com/img/finger.png'), auto;
+
+}
+
+
+.scroll-content{
+  background-color:#EFF5FF;
+  background-image: url('https://s-media-cache-ak0.pinimg.com/originals/b5/9f/d5/b59fd579e59cb9f37b319114c418e62b.jpg');
+  background-repeat: repeat-y;
+
+}
+
+
+/* Card
+==================================*/
+
+
+
+.card-item.item {
+    border: none;
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+
+.card-item.item:first-child {
+    padding-top: 16px;
+}
+
+.card {
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+    display: block;
+    margin: 8px;
+    padding: 0;
+    position: relative;
+    font-size: 4em;
+    font-style:bold;
+    background-color:white;
+    color:blue;
+}
+.card .image {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.card img {
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+    display: block;
+    max-width: 100%;
+    max-height: initial;
+    position: static;
+}
+.card.card-gallery img {
+    border: none;
+    box-shadow: none;
+    display: block;
+}
+.card .card-footer {
+    font-size: 90%;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    padding-top: 10px;
+}
+.card > .item {
+    border: none;
+    color:blue;
+}
+.card.card-gallery > .item {
+    background: inherit;
+}
+.card .icon + .icon {
+    padding-left: 1rem;
+}
+
+.card .item.item-avatar {
+    min-height: 88px;
+    padding-left: 88px;
+}
+
+}

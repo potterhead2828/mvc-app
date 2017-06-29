@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar color="secondary"> 
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    
+         
+        </button>
+    <ion-title>
+            <p style="font-weight: bold; font-size:18px;font-size:18px;">Historial de pagos</p>
+    </ion-title>
+  </ion-navbar>
+  <style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+</style>
+</ion-header>
+
+<ion-content padding >
+
+<ion-list>
+  <ion-list-header>
+  </ion-list-header>
+
+  <ion-item>
+  <table>
+  <tr>
+    <th>Fecha</th>
+    <th>Monto</th>
+    <th>Concepto</th>
+  </tr>
+  <tr *ngFor="let pago of pagos">
+    <td>{{pago.fecha}}</td>
+    <td>{{pago.monto}}</td>
+    <td nowrap>{{pago.concepto}}</td>
+  </tr>
+</table>
+  </ion-item>  
+    
+</ion-list> 
+</ion-content>
+

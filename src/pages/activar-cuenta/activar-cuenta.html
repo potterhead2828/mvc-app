@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar color="primary"> 
+    <button ion-button (click)="volver()">
+       <p style=" font-size:15px;font-size:15px;">volver</p>
+       <br>
+    </button>
+
+           
+  </ion-navbar>
+</ion-header>
+<style>
+ion-content{
+	background-image: url('https://img.clipartfest.com/73e6c038af053d20e42a31684ae166cf_data-center-building-clipart-data-center-building-clipart_512-512.png');
+}
+</style>
+
+<ion-content >
+
+ <!-- Real floating action button, fixed. It will not scroll with the content -->
+  <ion-fab top left edge>
+ 
+    <ion-label stacked style="color: #ebedef; margin-left: 3px;font-size:15px;"> <ion-icon name="lock"></ion-icon> Introduzca su clave de activacion</ion-label>
+    <ion-input floating type="text"[(ngModel)]="clave" style="border: 1px solid #ebedef; border-radius: 2px; background-color: #ebedef;"></ion-input>
+    <button ion-fab (click)="BuscarCuenta()" medium full><ion-icon name="log-in"medium></ion-icon></button>
+   
+    <ion-fab-list> 
+
+
+    
+    <ion-label stacked style="color: #ebedef; margin-left: 3px;font-size:20px; "><ion-icon name="mail"></ion-icon> Email</ion-label>
+    
+    <ion-input floating type="text" [(ngModel)]="email" style="border: 1px solid #ebedef; border-radius: 1px; background-color: #ebedef;"></ion-input>
+
+  
+    <ion-label stacked style="color: #ebedef; margin-left: 3px;font-size:20px;"> <ion-icon name="lock"></ion-icon> Password</ion-label>
+    <ion-input floating type="password"[(ngModel)]="password" style="border: 1px solid #ebedef; border-radius: 1px; background-color: #ebedef;"></ion-input>
+
+   <button ion-button (click)="submit()" medium full> 
+ <ion-icon name="log-in" medium full></ion-icon>activar cuenta</button>
+
+    
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>
+

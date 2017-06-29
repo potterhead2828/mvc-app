@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar color="secondary"> 
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    
+         
+        </button>
+    <ion-title>
+            <p style="font-weight: bold; font-size:20px;font-size:20px;">Cartelera</p>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+
+<ion-card *ngFor="let anuncio of anuncios">
+
+  <ion-item>
+    <h3>{{anuncio.titulo}}</h3>
+    <b>{{anuncio.fecha}}</b>
+    
+  </ion-item>
+  <ion-card-content>
+    <p>{{anuncio.texto}}</p>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div></div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div></div>
+      </button>
+    </ion-col>
+    <ion-col center text-center>
+      <ion-note>
+        
+      </ion-note>
+    </ion-col>
+  </ion-row>
+
+</ion-card>
+
+</ion-content>

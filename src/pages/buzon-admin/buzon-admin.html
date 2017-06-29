@@ -1,0 +1,39 @@
+
+<ion-header>
+  <ion-navbar color="primary"> 
+    <button ion-button (click)="irHomePropietario()">
+       <p style="font-weight: bold; font-size:15px;font-size:15px;">Cerrar modo Administrador</p>
+    </button>
+
+           
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+<ion-list nolines>
+<ion-item *ngFor="let mensaje of mensajes" nolines>   
+  <!--El nFor se le coloca al elemento que contendra cada item del arreglo o lista.
+                                                 El elemento que queremos se repita.-->
+      <!--mensaje es un nombre cualquiera usando en el documento html para
+                                                    denotar a cada elemento del arreglo que si se llama mensajes                                                           en el archivo ts.-->
+
+        <b>{{mensaje.remitente}}</b>
+       
+        <h3>{{mensaje.asunto}}</h3>
+
+        <p>{{mensaje.fecha}}</p>
+        
+<ion-item text-wrap nolines>            
+         <p>{{mensaje.mensaje}}</p>         
+</ion-item>
+<ion-item nolines>
+  <button ion-button outline item-right icon-left (click)="responder(mensaje.remitenteID)">
+      <ion-icon name="chatboxes"></ion-icon>
+      Responder
+    </button>
+</ion-item>
+</ion-item>
+
+</ion-list>
+</ion-content>
+

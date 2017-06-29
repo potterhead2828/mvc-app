@@ -1,0 +1,49 @@
+<!--
+  Generated template for the ActivarConsultaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-tabs>
+    <ion-tab [root]="modificarCarteleraRoot" tabTitle="Modificar cartelera" tabIcon="calendar"></ion-tab>
+    <ion-tab [root]="administrarPagosRoot" tabTitle="Administrar pagos" tabIcon="cash"></ion-tab>
+    <ion-tab [root]="escribirAPropietarioRoot" tabTitle="Escribir a propietario" tabIcon="chatboxes"></ion-tab>
+    <ion-tab [root]="activarConsultaRoot" tabTitle="Activar consulta" tabIcon="clipboard"></ion-tab>
+</ion-tabs>
+
+<ion-header>
+  <ion-navbar color="primary"> 
+    <button ion-button (click)="irHomePropietario()">
+       <p style="font-weight: bold; font-size:15px;font-size:15px;">Cerrar modo Administrador</p>
+    </button>
+
+           
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+<button ion-button icon-right (click)="publicarAnuncio()">
+  Nueva publicacion
+  <ion-icon name="add"></ion-icon>
+</button>
+<ion-card *ngFor="let anuncio of anuncios">
+
+  <ion-item>
+    <b>{{anuncio.titulo}}</b>
+    <h3>{{anuncio.fecha}}</h3>
+    
+  </ion-item>
+  <ion-card-content>
+    <p>{{anuncio.texto}}</p>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col>
+      <button ion-button clear item-right (click)=editar(anuncio)>editar</button>
+    </ion-col>
+ 
+  </ion-row>
+
+</ion-card>
+
+</ion-content>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HomePage } from "../../home/home";
 
 /**
  * Generated class for the ActivarConsultaPage page.
@@ -14,12 +15,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ActivarConsultaPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ActivarConsultaPage');
+  constructor(public navCtrl: NavController, public navParams: NavParams) 
+  {
   }
 
 
+//Se dirige al homepage del modo propietario
+irHomePropietario()
+   {
+     this.navCtrl.setRoot(HomePage);
+   }
 }

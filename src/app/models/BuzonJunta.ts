@@ -23,9 +23,6 @@ enviarMensajeJunta(mensaje)
 }
 
 //Enviar un mensaje al buzon de un propietario.
-enviarMensajePropietario(mensaje,id)
-{
-   this.bd_BuzonJunta.child(id).push(mensaje);		
-}
+
 
 }

@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpProvider } from "../../providers/http/http";
 import * as firebase from 'firebase';
-import { MensajeRegistroPage } from "../mensaje-registro/mensaje-registro";
 import { Usuario } from "../../app/models/Usuario";
 import { Pago } from "../../app/models/Pago";
 import { CuentaPropietario } from "../../app/models/CuentaPropietario";
 import { Recibo } from "../../app/models/Recibo";
 import { ReciboPagado } from "../../app/models/ReciboPagado";
+import { ImprimirMensajePage } from "../imprimir-mensaje/imprimir-mensaje";
 /**
  * Generated class for the RegitrarPagoPage page.
  *
@@ -150,8 +150,12 @@ registrarPago()
     this.cuenta.actualizar(this.InfoPago);
     this.reciboPagado.actualizar(this.InfoPago);  
     this.pago.crear(this.usuario.getId(),pago);
-    this.navCtrl.setRoot(MensajeRegistroPage);
+    var mensaje="Su pago ha sido registrado exitosamente"
+    this.navCtrl.push(ImprimirMensajePage,{mensaje:mensaje});
+ 
 }
 //___________
+
+
 
 }

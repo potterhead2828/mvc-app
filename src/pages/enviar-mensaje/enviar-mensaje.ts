@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import * as firebase from 'firebase';
 import { HttpProvider } from "../../providers/http/http";
-import { MensajeEnviadoPage } from "../mensaje-enviado/mensaje-enviado";
 import { Usuario } from "../../app/models/Usuario";
 import { BuzonJunta } from "../../app/models/BuzonJunta";
+import { ImprimirMensajePage } from "../imprimir-mensaje/imprimir-mensaje";
 /**
  * Generated class for the EnviarMensajePage page.
  *
@@ -55,7 +55,8 @@ enviarMensaje()
                            RemitenteID:this.usuario.getId()
                           }
  this.buzonJunta.enviarMensajeJunta(mensaje);
- this.navCtrl.setRoot(MensajeEnviadoPage);
+ var texto="Su mensaje ha sido enviado exitosamente"
+ this.navCtrl.push(ImprimirMensajePage,{mensaje:texto});
 	});
   
 

@@ -18,18 +18,25 @@ import { PublicarReciboPage } from "../../publicar-recibo/publicar-recibo";
 })
 export class AdministrarPagosPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public miProvider:HttpProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public miProvider:HttpProvider) 
+  {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AdministrarPagosPage');
-  }
-publicarRecibo(){
+  
+publicarRecibo()
+{
    this.navCtrl.setRoot(PublicarReciboPage);
 }
 
-verRecibos(){
+verRecibos()
+{
 
 }
+
+//Se dirige al homepage del modo propietario
+irHomePropietario()
+   {
+     this.navCtrl.setRoot(HomePage);
+   }
 
 }

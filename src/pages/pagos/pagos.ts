@@ -75,15 +75,16 @@ getCuentaPropietario()
            this.SaldoAFavor=snapshot.val().SaldoAFavor,
            this.SaldoDeudor=snapshot.val().SaldoDeudor, 
              that.reciboPagado.buscar(this.usuario.getId()).then(snapshot2=>
-                 { 
+                 {          console.log("snapshot2:_"+JSON.stringify(snapshot2));
                    snapshot2.forEach(function(childSnapshot) 
                             {
                               var childKey = childSnapshot.key;
                               var childData = childSnapshot.val();
                               var fecha;
                               var monto;
-                              that.recibo.Buscar(childKey).then(snapshot3=>
+                              that.recibo.Buscar(childSnapshot.val().reciboid).then(snapshot3=>
                                   {
+                                   console.log("snapshot3:_"+JSON.stringify(snapshot3)); 
                                    fecha=snapshot3.val().Fecha;
                                    monto=snapshot3.val().Monto;
                                    that.InfoPago.HistorialPagos[i]={  

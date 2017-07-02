@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpProvider } from "../../providers/http/http";
-import { MensajeEnviado2Page } from "../mensaje-enviado2/mensaje-enviado2";
 import { HomePage } from "../home/home";
 import { Usuario } from "../../app/models/Usuario";
 import { BuzonJunta } from "../../app/models/BuzonJunta";
 import * as firebase from 'firebase';
+import { ImprimirMensajePage } from "../imprimir-mensaje/imprimir-mensaje";
+import { BuzonPropietario } from "../../app/models/BuzonPropietario";
 
 /**
  * Generated class for the EnviarMensajePage page.
@@ -26,6 +27,7 @@ export class EnviarMensajePropPage {
          remitente:any;
          usuario:Usuario;
          buzonJunta:BuzonJunta;
+         buzonPropietario:BuzonPropietario;
          fecha:any;
          fech:any;
          f:any;
@@ -35,6 +37,7 @@ export class EnviarMensajePropPage {
          {  
             this.usuario=new Usuario();
             this.buzonJunta= new BuzonJunta();
+            this.buzonPropietario=new BuzonPropietario();
             this.usuario.setId(params.get("userID"));
             this.f=new Date();
             this.fech={
@@ -55,8 +58,10 @@ enviarMensaje()
                      Mensaje:this.mensaje,
                      Fecha:this.fecha
                     }
-        this.buzonJunta.enviarMensajePropietario(mensaje,this.usuario.getId());
-        this.navCtrl.setRoot(MensajeEnviado2Page);
+        this.buzonPropietario.enviarMensajePropietario(mensaje,this.usuario.getId());
+        var texto="Su mensaje ha sido enviado exitosamente";
+        this.navCtrl.push(ImprimirMensajePage,{mensaje:texto});
+     
 
       }
 

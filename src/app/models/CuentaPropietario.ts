@@ -26,7 +26,7 @@ actualizar(InfoPago)
 {
  this.bd_cuentaPropietario.child(InfoPago.UserID).set
       ({
-		   SaldoAFavor:InfoPago.SaldoAFavor,
+		       SaldoAFavor:InfoPago.SaldoAFavor,
            SaldoDeudor:InfoPago.SaldoDeudor,
        });
 }

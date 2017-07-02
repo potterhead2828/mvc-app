@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpProvider } from "../../providers/http/http";
 import * as firebase from 'firebase';
-import { MensajeRegistroPage } from "../mensaje-registro/mensaje-registro";
 import { LoginPage } from "../login/login";
 import { BienvenidoPage } from "../bienvenido/bienvenido";
 import { Usuario } from "../../app/models/Usuario";

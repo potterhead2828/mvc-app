@@ -29,5 +29,8 @@ BuscarBuzon(id)
     return Ref.once('value');  
 }
 
-
+enviarMensajePropietario(mensaje,id)
+{
+   this.bd_BuzonPropietario.child(id).push(mensaje);		
+}
 }

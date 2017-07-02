@@ -14,9 +14,9 @@
 <ion-content padding >
   <ion-card>
   <ion-card-content>
-    <b style="font-weight: bold; font-size:19px;font-size:15px; color:blue">Recibo mes de Mayo:_</b>
-    <p style="font-weight: bold; font-size:18px;font-size:18px; color:red">         Bsf.376800</p>
-    <button ion-button icon-left>
+    <p style=" font-size:15px;font-size:18px; color:red">
+  <ion-icon name="remove-circle" large></ion-icon> Saldo deudor:BsF:_{{SaldoDeudor}}</p>
+    <button ion-button icon-left (click)="irARegistro()">
   <ion-icon name="card"></ion-icon>
   Registrar pago
 </button>

@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from "../../home/home";
 import { HttpProvider } from "../../../providers/http/http";
 import { PublicarReciboPage } from "../../publicar-recibo/publicar-recibo";
+import { ListaRecibosPage } from "../../lista-recibos/lista-recibos";
 
 /**
  * Generated class for the AdministrarPagosPage page.
@@ -30,7 +31,7 @@ publicarRecibo()
 
 verRecibos()
 {
-
+   this.navCtrl.setRoot(ListaRecibosPage);
 }
 
 //Se dirige al homepage del modo propietario

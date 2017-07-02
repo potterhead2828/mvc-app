@@ -6,18 +6,42 @@
          
         </button>
     <ion-title>
-            <p style="font-weight: bold; font-size:20px;font-size:20px;">Pagos</p>
+            <p style="font-weight: bold; font-size:18px;font-size:18px;">Historial de pagos</p>
     </ion-title>
   </ion-navbar>
+  <style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+</style>
 </ion-header>
 
 <ion-content padding >
-<div class = "row">
-   <div class = "col">Fecha</div>
-   <div class = "col">Monto</div>
-   <div class = "col"><a> recibo</a></div>
-</div>
 
+<ion-list>
+  <ion-list-header>
+  </ion-list-header>
 
+  <ion-item>
+  <table>
+  <tr>
+    <th>Fecha de Publicacion</th>
+    <th>Monto</th>
+  </tr>
+  <tr *ngFor="let recibo of recibos">
+    <td>{{recibo.fecha}}</td>
+    <td>{{recibo.monto}}</td>
+  </tr>
+</table>
+  </ion-item>  
+    
+</ion-list> 
 </ion-content>
 

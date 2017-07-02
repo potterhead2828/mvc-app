@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { Usuario } from "../../app/models/Usuario";
+import { Recibo } from "../../app/models/Recibo";
+import * as firebase from 'firebase';
 /**
  * Generated class for the ListaRecibosPage page.
  *
@@ -14,11 +16,38 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ListaRecibosPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+   usuario:Usuario;
+   recibo:Recibo;
+   recibos=[];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) 
+  {
+     this.usuario=new Usuario();
+              this.recibo=new Recibo();
+              this.usuario.setId(firebase.auth().currentUser.uid);
+              this.cargarRecibos();  
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ListaRecibosPage');
+  cargarRecibos()
+  {
+
+      this.recibo.getReciboRef().then(snapshot2=>
+        { 
+          var recibos=this.recibos;
+          var i=0;
+          snapshot2.forEach(function(childSnapshot) 
+                  {               
+                    var childKey = childSnapshot.key;
+                    var childData = childSnapshot.val();
+                    recibos[i]={
+                              fecha:childData.Fecha,
+                              monto:childData.Monto,
+                             };
+                             
+                    i++;
+                  });
+             
+        })
   }
 
 }

@@ -4,7 +4,11 @@ import { HttpProvider } from '../../providers/http/http';
 import { LeerAnuncioPage } from "../leer-anuncio/leer-anuncio";
 import { Usuario } from "../../app/models/Usuario";
 import { Cartelera } from "../../app/models/Cartelera";
+import { RegitrarPagoPage } from "../regitrar-pago/regitrar-pago";
 import * as firebase from 'firebase';
+import { CuentaPropietario } from "../../app/models/CuentaPropietario";
+import { PagosPage } from "../pagos/pagos";
+
 
 
 
@@ -20,12 +24,19 @@ export class HomePage {
    titulo:any;
    usuario:Usuario;
    cartelera:Cartelera;
-  
+   cuenta:CuentaPropietario;
+   SaldoDeudor;
     //El constructor se ejecuta al cargar la pagina home.html
     constructor(public navCtrl: NavController,private miProvider:HttpProvider) 
             {
                  this.cartelera=new Cartelera();
                  this.usuario=new Usuario();
+                 this.usuario.setId(firebase.auth().currentUser.uid);
+                 this.cuenta=new CuentaPropietario();
+                 var that=this;
+                 this.cuenta.buscar(this.usuario.getId()).then(snapshot=>{
+                             that.SaldoDeudor=snapshot .val().SaldoDeudor      
+                 })
                  this.BuscarAnuncios ();
             }
 
@@ -60,6 +71,12 @@ BuscarAnuncios()
 verAnuncio(id)
 {
    this.navCtrl.push(LeerAnuncioPage,{id:id});
+}
+
+irARegistro()
+{
+this.navCtrl.push(PagosPage);
+   
 }
 
 }

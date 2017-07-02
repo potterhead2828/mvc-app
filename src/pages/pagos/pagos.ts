@@ -5,98 +5,99 @@ import { RegitrarPagoPage } from "../regitrar-pago/regitrar-pago";
 import { HistorialPagosPage } from "../historial-pagos/historial-pagos";
 import { ListaRecibosPage } from "../lista-recibos/lista-recibos";
 import * as firebase from 'firebase';
+import { Recibo } from "../../app/models/Recibo";
+import { ReciboPagado } from "../../app/models/ReciboPagado";
+import { Usuario } from "../../app/models/Usuario";
+import { CuentaPropietario } from "../../app/models/CuentaPropietario";
 /**
  * Generated class for the PagosPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
-@IonicPage()
+
 @Component({
   selector: 'page-pagos',
   templateUrl: 'pagos.html',
   providers: [HttpProvider]
 })
 export class PagosPage {
+  SaldoAFavor;
+  SaldoDeudor;
+  InfoPago:any;
+  recibo:Recibo;
+  reciboPagado:ReciboPagado;
+  usuario:Usuario;
+  cuenta:CuentaPropietario;
 
-  public SaldoAFavor:number;
-  public SaldoDeudor:number;
-  public UserID:any;
-  public InfoPago:any;
+  constructor(public navCtrl: NavController, public navParams: NavParams,private miProvider:HttpProvider) 
+   { 
+     this.usuario=new Usuario();
+     this.recibo=new Recibo();
+     this.reciboPagado=new ReciboPagado();
+     this.usuario.setId(firebase.auth().currentUser.uid);
+     this.cuenta=new CuentaPropietario();
+     this.getCuentaPropietario();
+   }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private miProvider:HttpProvider) {
-   this.UserID=firebase.auth().currentUser.uid;
-   this.getCuentaPropietario();
-   
-  }
+ 
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad PagosPage');
-  }
-
-irARegistro(){
+irARegistro()
+{
  this.navCtrl.push(RegitrarPagoPage,{InfoPago:this.InfoPago});
-
 }
 
-irAHistorial(){
+irAHistorial()
+{
  this.navCtrl.setRoot(HistorialPagosPage);
-
 }
 
-irALista(){
+irALista()
+{
  this.navCtrl.setRoot(ListaRecibosPage);
-
 }
 
-getCuentaPropietario(){
-
-this.miProvider.findUserAccount(this.UserID).then(snapshot => {
-
-      var that=this;
-      var i=0;
-      this.SaldoAFavor=snapshot.val().SaldoAFavor;
-      this.SaldoDeudor=snapshot.val().SaldoDeudor;
-      this.InfoPago=
-      { SaldoAFavor:that.SaldoAFavor,
-        SaldoDeudor:that.SaldoDeudor,
-        HistorialPagos:[],//Lista de recibos pagados o no pagados.
-        Recibos:[], 
-        UserID:that.UserID }
-
-      var recibosPagadosRef=this.miProvider.database_recibospagados.child(this.UserID);
-        recibosPagadosRef.once('value').then(snapshot2=>{ 
-               
-    
-              snapshot2.forEach(function(childSnapshot) {//Iteracion sobre la lista snapshot es la raiz, y childSnapshot es cada hijo, cada elemento de la tabla q uno quiere.
-    
-                   var childKey = childSnapshot.key;
-                   var childData = childSnapshot.val();
-                   var fecha;
-                   var monto;
-    
-                   that.miProvider.getRecibo(childKey).then(snapshot3=>{
-                          fecha=snapshot3.val().Fecha;
-                          monto=snapshot3.val().Monto;
-                          that.InfoPago.HistorialPagos[i]=
-                                                 {  reciboID:childData.reciboid,
-                                                    deuda:childData.deuda  };
-                          that.InfoPago.Recibos[i]={
-                                                    fecha:fecha,
-                                                    monto:monto 
-                          }                           
-                                                    
-                           i++;
-                          
+getCuentaPropietario()
+{
+     this.cuenta.buscar(this.usuario.getId()).then(snapshot => 
+         {
+           var that=this;
+           var i=0;
+           this.cuenta.setSaldoAFavor(snapshot.val().SaldoAFavor);
+           this.cuenta.setSaldoDeudor(snapshot.val().SaldoDeudor);
+           this.InfoPago={ 
+                          SaldoAFavor:snapshot.val().SaldoAFavor,
+                          SaldoDeudor:snapshot.val().SaldoDeudor,
+                          HistorialPagos:[],//Lista de recibos pagados o no pagados.
+                          Recibos:[], 
+                          UserID:that.usuario.getId() 
+                         }
+           this.SaldoAFavor=snapshot.val().SaldoAFavor,
+           this.SaldoDeudor=snapshot.val().SaldoDeudor, 
+             that.reciboPagado.buscar(this.usuario.getId()).then(snapshot2=>
+                 { 
+                   snapshot2.forEach(function(childSnapshot) 
+                            {
+                              var childKey = childSnapshot.key;
+                              var childData = childSnapshot.val();
+                              var fecha;
+                              var monto;
+                              that.recibo.Buscar(childKey).then(snapshot3=>
+                                  {
+                                   fecha=snapshot3.val().Fecha;
+                                   monto=snapshot3.val().Monto;
+                                   that.InfoPago.HistorialPagos[i]={  
+                                                                    reciboID:childData.reciboid,
+                                                                    deuda:childData.deuda  
+                                                                   };
+                                   that.InfoPago.Recibos[i]={
+                                                             fecha:fecha,
+                                                             monto:monto 
+                                                            }                           
+                                   i++;
+                                  })
+                              });
                    })
-                  
-            
-             });
-             
-         })
-
-   
-      
 });
 
 }

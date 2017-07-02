@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { NavController, ModalController, LoadingController, AlertController, ToastController} from 'ionic-angular';
-import * as firebase from 'firebase';
 import { HomePage } from "../home/home";
 import { HttpProvider } from "../../providers/http/http";
-import { HomeAdminPage } from "../home-admin/home-admin";
+import { HomeAdminPage } from "../ModoAdministradorTabs/home-admin/home-admin";
 import { ActivarCuentaPage } from "../activar-cuenta/activar-cuenta";
+import { Usuario } from "../../app/models/Usuario";
+import * as firebase from 'firebase';
+
 /**
  * Generated class for the LoginPage page.
  *
@@ -18,129 +20,108 @@ import { ActivarCuentaPage } from "../activar-cuenta/activar-cuenta";
   providers: [HttpProvider]
 })
 export class LoginPage {
-public emailField: any; 
-public passwordField: any; 
-private users = [];
-private usersList : any;
-public administrador:any;
+
+  usuario:Usuario;
+  email;
+	password;
 
   constructor(private alertCtrl: AlertController , private loadingCtrl: LoadingController, private navCtrl: NavController, private modalCtrl: ModalController, private miProvider: HttpProvider, private toastCtrl: ToastController) {
-				
-				this.emailField = "";
-				this.passwordField = "";
-  			
-  
+		
+  		  this.usuario=new Usuario();
+        
   }
   
-  
-  
-  
-  signUserUp(){
-  	
-  	this.miProvider.signUpUser(this.emailField, this.passwordField).then(authData => {
-  		//successful
-  		this.navCtrl.setRoot(HomePage);
-  	}, error => {
-  		this.navCtrl.setRoot(LoginPage);
-  	});
-  	
-  	
-  	let loader = this.loadingCtrl.create({
-  		dismissOnPageChange: true,
-  	});
-  	
-  	loader.present();
-  	
-  }
 
+//Dirige a la pagina de activacion de una cuenta 
 goToActivacion(){
 
 	this.navCtrl.setRoot(ActivarCuentaPage);
+
 }
 
 
-//login
 
+//Login del usuario Administrador
  submitLoginAdmin(){
-	alert(this.passwordField);
+	
 	var that=this;
-  	this.miProvider.loginUser(this.emailField, this.passwordField).then(authData => {
-     var user=firebase.auth().currentUser;
-		 this.miProvider.findUser(user.uid).then(snapshot => { //dentro del .then this no esta definido por eso,
-                                                        //lo metemos en la variable that
-		that.administrador = snapshot.val().administrador; 
-	    
+  this.usuario.setEmail(this.email);
+	this.usuario.setPassword(this.password);
+
+  	 this.usuario.login().then(authData => 
+		   {
+          var user=firebase.auth().currentUser;
+		      this.usuario.buscar(user.uid).then(snapshot => {                                         
+		      that.usuario.setAdministrador(snapshot.val().administrador); 
      
-     if (that.administrador==true){
-  		//successful
-  		this.navCtrl.setRoot(HomeAdminPage);
-		 }
-		 else{
-			 	//alert("error logging in: "+ error.message);
-  		let alert = this.alertCtrl.create({
-	      title: 'Error',
-	      subTitle: "Disculpe, usted no pertence a la junta de condominio",
-	      buttons: ['OK'],
-	    });
-	    alert.present();
-			this.navCtrl.setRoot(LoginPage);
-		 }
-  	}, error => {
-  		//alert("error logging in: "+ error.message);
-  		let alert = this.alertCtrl.create({
-	      title: 'Error loggin in',
-	      subTitle: "error.message",
-	      buttons: ['OK']
-	    });
-	    alert.present();
-			this.navCtrl.setRoot(LoginPage);
-  	});
-  	
-  	
-  	let loader = this.loadingCtrl.create({
-  		dismissOnPageChange: true,
-  	});
-  	
-  	loader.present();
-	})
-	 
+		      if (that.usuario.getAdministrador()==true)
+					  {                                 
+  		       this.navCtrl.setRoot(HomeAdminPage);
+		        }
+		      else
+					{
+	         let alert = this.alertCtrl.create
+					 ({
+	         title: 'Error',
+	         subTitle: "Disculpe, usted no pertence a la junta de condominio",
+	         buttons: ['OK'],
+	         });
+	         alert.present();
+			     this.navCtrl.setRoot(LoginPage);
+		      }
+  	}, error => 
+		    {       
+  		    let alert = this.alertCtrl.create
+					({
+	        title: 'Error loggin in',
+	        subTitle: "error.message",
+	        buttons: ['OK']
+	        });
+	        alert.present();
+			    this.navCtrl.setRoot(LoginPage);
+  	    });
+  	    let loader = this.loadingCtrl.create
+				({
+  		  dismissOnPageChange: true,
+  	    });
+  	    loader.present();
+	})	 
  }
+
+//Login de propietarios, no miembros de la junta de condominio
   submitLogin(){
-  	
-  		alert(this.passwordField);
-  	this.miProvider.loginUser(this.emailField, this.passwordField).then(authData => {
-  		//successful
+     
+		  this.usuario.setEmail(this.email);
+	    this.usuario.setPassword(this.password);
+
+  	  this.usuario.login().then(authData => 
+			{
   		this.navCtrl.setRoot(HomePage);
-  		
-  	}, error => {
-  		//alert("error logging in: "+ error.message);
-  		let alert = this.alertCtrl.create({
+		  }, 
+		  error => 
+			{
+  	    let alert = this.alertCtrl.create
+				({
 	      title: 'Error loggin in',
 	      subTitle: error.message,
 	      buttons: ['OK']
-	    });
+	      });
 	    alert.present();
 			this.navCtrl.setRoot(LoginPage);
   	});
-  	
-  	
-  	let loader = this.loadingCtrl.create({
+  	let loader = this.loadingCtrl.create
+		({
   		dismissOnPageChange: true,
   	});
-  	
   	loader.present();
-  	
-  	
-  	
     }
  
   
-
+//Para manejar perdida de contraseña.
 showForgotPassword(){
 	
-	//
-	
-	 let prompt = this.alertCtrl.create({
+	 let prompt = this.alertCtrl.create
+	  ({
       title: 'Introduce tu Email',
       message: "Una nueva contraseña sera enviada a tu email",
       inputs: [
@@ -158,41 +139,45 @@ showForgotPassword(){
         },
         {
           text: 'Submit',
-          handler: data => {
-           
-            
-            //add preloader
-            let loading = this.loadingCtrl.create({
-				dismissOnPageChange: true,
-				content: 'Reseting your password..'
-			});
-			 loading.present();
-             //call usersservice
-            this.miProvider.forgotPasswordUser(data.recoverEmail).then(() => {
-            	   //add toast
-            	     loading.dismiss().then(() => {
+          handler: data => 
+					{
+            let loading = this.loadingCtrl.create
+					({
+				    dismissOnPageChange: true,
+				    content: 'Reseting your password..'
+			    });
+			    loading.present();
+             
+          this.usuario.forgotPasswordUser(data.recoverEmail).then(() => 
+					{
+            	   
+            	     loading.dismiss().then(() => 
+									 {
             	     	//show pop up
-            	     		let alert = this.alertCtrl.create({
-					      title: 'Check your email',
-					      subTitle: 'Password reset successful',
-					      buttons: ['OK']
-					    });
-					    alert.present();
-            	     })
+            	     		let alert = this.alertCtrl.create
+											 ({
+					               title: 'Check your email',
+					               subTitle: 'Password reset successful',
+					               buttons: ['OK']
+					             });
+					             alert.present();
+            	      })
             	
-            	}, error => {
+          }, error => 
+					  {
             		//show pop up
-            		loading.dismiss().then(() => {
-				  		let alert = this.alertCtrl.create({
+            		loading.dismiss().then(() => 
+								{
+				  		  let alert = this.alertCtrl.create
+								({
 					      title: 'Error resetting password',
 					      subTitle: error.message,
 					      buttons: ['OK']
 					    });
 					    alert.present();
 					 })
-               this.navCtrl.setRoot(LoginPage);
-	    
-            	});
+              this.navCtrl.setRoot(LoginPage);
+	         });
           }
         }
       ]
@@ -200,20 +185,6 @@ showForgotPassword(){
     prompt.present();
   }
 	
-	
-	googleSignIn(){
-		
-		this.miProvider.googleSignInUser().then(()=>{
-			//success, redirect
-			let toast = this.toastCtrl.create({
-		      message: 'User account created successfully...',
-		      duration: 3000
-		    });
-		    toast.present();
-		
-		});	
-		  
-	}
 
 
 }

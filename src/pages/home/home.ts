@@ -1,66 +1,65 @@
 import { Component } from '@angular/core';
 import { NavController} from 'ionic-angular';
 import { HttpProvider } from '../../providers/http/http';
- 
-import * as firebase from 'firebase';
 import { LeerAnuncioPage } from "../leer-anuncio/leer-anuncio";
+import { Usuario } from "../../app/models/Usuario";
+import { Cartelera } from "../../app/models/Cartelera";
+import * as firebase from 'firebase';
+
+
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
-  providers: [HttpProvider]
+  providers: [HttpProvider,Usuario]
 })
+
 export class HomePage {
-  public items=[];
-  private nombre:any;
-  private apellido:any;
-  public anuncios=[];
-  public titulo:any;
-  public fecha:any;
-  public texto:any;
-  constructor(public navCtrl: NavController,private miProvider:HttpProvider) {
+    
+   anuncios=[];
+   titulo:any;
+   usuario:Usuario;
+   cartelera:Cartelera;
   
-  //this.items=["#RacionamientoHidrocapital","#AscensoresFuncionado","#NuevoReciboPublicado"];
-  this.BuscarAnuncios();
+    //El constructor se ejecuta al cargar la pagina home.html
+    constructor(public navCtrl: NavController,private miProvider:HttpProvider) 
+            {
+                 this.cartelera=new Cartelera();
+                 this.usuario=new Usuario();
+                 this.BuscarAnuncios ();
+            }
 
+//Busca los ultimos 5 titulos publicados en la cartelera
+BuscarAnuncios()
+{
+    var that=this;
+    //dentro del .then this no esta definido por eso,lo asignamos a la variable that
+    var i=0;
+    var ref=that.cartelera.get_bd_titulos();
+    ref.then(snapshot => 
+        { 
+           snapshot.forEach(function(childSnapshot) 
+               {
+                  var childKey = childSnapshot.key;
+                  var childData = childSnapshot.val();
+                  that.anuncios[i]={
+                                    id:childKey,
+                                    fecha:childData.Fecha,
+                                    texto:childData.Texto,
+                                    titulo:childData.Titulo,
+                  };
+                  i++;
+
+              });
+   
+        });
 }
 
-BuscarUsuario(theUserId){
-	
-	var that = this;
-	
-	this.miProvider.findUser(theUserId).then(snapshot => { //dentro del .then this no esta definido por eso,
-                                                        //lo metemos en la variable that
-		that.nombre = snapshot.val().nombre; //get user photo
-	   that.apellido= snapshot.val().apellido; 
-	})
-}
-
-BuscarAnuncios(){
-  console.log("IM IN!!");
-var that=this;
-var i=0;
-  this.miProvider.database_cartelera_titulos.once('value', function(snapshot) { //Once te devuelve una lista y te permite iterar sobre esa lista
-  snapshot.forEach(function(childSnapshot) {//Iteracion sobre la lista snapshot es la raiz, y childSnapshot es cada hijo, cada elemento de la tabla q uno quiere.
-    var childKey = childSnapshot.key;
-    var childData = childSnapshot.val();
-    that.anuncios[i]={ //leo la tabla de firebase en un arreglo mensajes de este archivo, para que despues el html lea de ese arreglo.
-          id:childKey,
-          fecha:childData.Fecha,
-          texto:childData.Texto,
-          titulo:childData.Titulo,
-    };
-    i++;
-
-  });
-   //console.log("Mensajes-->"+mensajes)
-});
-
-
-}
-
-verAnuncio(id){
-console.log("anuncio id-->"+id);
-this.navCtrl.push(LeerAnuncioPage,{id:id});
+//Muestra el anuncio cuyo titulo fue seleccionado en el homepage.
+//El id del anuncio se envia a la pagina LeerAnuncio, para que esta lo cargue directamente.
+verAnuncio(id)
+{
+   this.navCtrl.push(LeerAnuncioPage,{id:id});
 }
 
 }

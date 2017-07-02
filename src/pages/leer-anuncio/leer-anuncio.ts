@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpProvider } from "../../providers/http/http";
+import { Cartelera } from "../../app/models/Cartelera";
 
 /**
  * Generated class for the LeerAnuncioPage page.
@@ -8,36 +9,38 @@ import { HttpProvider } from "../../providers/http/http";
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
-@IonicPage()
+
 @Component({
   selector: 'page-leer-anuncio',
   templateUrl: 'leer-anuncio.html',
   providers: [HttpProvider]
 })
 export class LeerAnuncioPage {
-public anuncioID:any;
-public titulo:any;
-public fecha:any;
-public texto:any;
-  constructor(public navCtrl: NavController, public params: NavParams, private miProvider:HttpProvider) {
-    this.anuncioID=params.get("id");
-    this.leerAnuncio();  
-}
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LeerAnuncioPage');
-  }
+anuncioID:any;
+titulo:any;
+fecha:any;
+texto:any;
+cartelera:Cartelera;
+  
+  //El contrustor se ejecuta cuando se carga la pagina leer-anuncio.html
+  constructor(public navCtrl: NavController, public params: NavParams, private miProvider:HttpProvider) 
+       {
+         this.cartelera=new Cartelera();
+         this.anuncioID=params.get("id");
+         this.leerAnuncio();
+       }
 
-leerAnuncio(){
-var a;
-var that=this;
- this.miProvider.findAnuncio(this.anuncioID).then(snapshot => {
-	
+//Muestra el anuncio cuyo titulo fue seleccionado en el homepago modo propietario.
+leerAnuncio()
+{
+ var that=this;
+ that.cartelera.buscar(this.anuncioID).then(snapshot => 
+  {	
 		that.titulo = snapshot.val().Titulo; 
-	   that.fecha= snapshot.val().Fecha;
-     that.texto=snapshot.val().Texto; 
+	  that.fecha= snapshot.val().Fecha;
+    that.texto=snapshot.val().Texto; 
 	})
-console.log("leerAnuncio--->"+" "+this.titulo+" "+this.fecha+" "+this.texto);
 }
 
 }

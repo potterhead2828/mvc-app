@@ -11,24 +11,21 @@ import { EnviarMensajePage } from '../pages/enviar-mensaje/enviar-mensaje';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from "../pages/login/login";
-import { HomeAdminPage } from "../pages/home-admin/home-admin";
+import { HomeAdminPage } from "../pages/ModoAdministradorTabs/home-admin/home-admin";
 import { MensajeEnviadoPage } from "../pages/mensaje-enviado/mensaje-enviado";
 import { EnviarMensajePropPage} from "../pages/enviar-mensaje-prop/enviar-mensaje-prop";
 import { MensajeEnviado2Page } from "../pages/mensaje-enviado2/mensaje-enviado2";
 import { PublicarAnuncioPage } from "../pages/publicar-anuncio/publicar-anuncio";
 import { EditarAnuncioPage } from "../pages/editar-anuncio/editar-anuncio";
 import { LeerAnuncioPage } from "../pages/leer-anuncio/leer-anuncio";
-import { ModificarCarteleraPage } from "../pages/modificar-cartelera/modificar-cartelera";
-import { EscribirAPropietarioPage } from "../pages/escribir-a-propietario/escribir-a-propietario";
-import { AdministrarPagosPage } from "../pages/administrar-pagos/administrar-pagos";
-import { ActivarConsultaPage } from "../pages/activar-consulta/activar-consulta";
-import { RegitrarPagoPage } from "../pages/regitrar-pago/regitrar-pago";
 import { HistorialPagosPage } from "../pages/historial-pagos/historial-pagos";
 import { ListaRecibosPage } from "../pages/lista-recibos/lista-recibos";
 import { MensajeRegistroPage } from "../pages/mensaje-registro/mensaje-registro";
 import { ActivarCuentaPage } from "../pages/activar-cuenta/activar-cuenta";
 import { BienvenidoPage } from "../pages/bienvenido/bienvenido";
 import { PublicarReciboPage } from "../pages/publicar-recibo/publicar-recibo";
+import { RegitrarPagoPage } from "../pages/regitrar-pago/regitrar-pago";
+
 
 @NgModule({
   declarations: [

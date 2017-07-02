@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HomePage } from "../home/home";
-import { HttpProvider } from "../../providers/http/http";
-import { PublicarReciboPage } from "../publicar-recibo/publicar-recibo";
+import { HomePage } from "../../home/home";
+import { HttpProvider } from "../../../providers/http/http";
+import { PublicarReciboPage } from "../../publicar-recibo/publicar-recibo";
 
 /**
  * Generated class for the AdministrarPagosPage page.

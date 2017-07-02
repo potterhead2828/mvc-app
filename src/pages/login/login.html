@@ -23,11 +23,11 @@ ion-content{
 
     <ion-label stacked style="color: #ebedef; margin-left: 10px;font-size:20px; "><ion-icon name="mail"></ion-icon> Email</ion-label>
     
-    <ion-input floating type="text" [(ngModel)]="emailField" style="border: 1px solid #ebedef; border-radius: 15px; background-color: #ebedef;"></ion-input>
+    <ion-input floating type="text" [(ngModel)]="email" style="border: 1px solid #ebedef; border-radius: 15px; background-color: #ebedef;"></ion-input>
 
   
     <ion-label stacked style="color: #ebedef; margin-left: 10px;font-size:20px;"> <ion-icon name="lock"></ion-icon> Password</ion-label>
-    <ion-input floating type="password"[(ngModel)]="passwordField" style="border: 1px solid #ebedef; border-radius: 15px; background-color: #ebedef;"></ion-input>
+    <ion-input floating type="password"[(ngModel)]="password" style="border: 1px solid #ebedef; border-radius: 15px; background-color: #ebedef;"></ion-input>
 </ion-list>
 
    <button ion-button (click)="submitLogin()"   medium full> 

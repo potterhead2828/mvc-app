@@ -5,6 +5,7 @@ import * as firebase from 'firebase';
 import { MensajeRegistroPage } from "../mensaje-registro/mensaje-registro";
 import { LoginPage } from "../login/login";
 import { BienvenidoPage } from "../bienvenido/bienvenido";
+import { Usuario } from "../../app/models/Usuario";
 /**
  * Generated class for the RegitrarPagoPage page.
  *
@@ -19,49 +20,51 @@ import { BienvenidoPage } from "../bienvenido/bienvenido";
 })
 export class ActivarCuentaPage {
 
-   public usuario:any;
-   public clave:any;
-   public email:any;
-   public password:any;
-  constructor(public navCtrl: NavController, public params: NavParams,private miProvider:HttpProvider) {
-        
-        this.BuscarCuenta();
-      
-        
- }
+    usuario:Usuario;
+    clave:any;
+    email:any;
+    password:any;
 
-volver(){
+    //Constructor se ejecuta cuando la pagina activar-cuenta.html se carga
+    constructor(public navCtrl: NavController, public params: NavParams,private miProvider:HttpProvider) 
+              {
+                this.usuario=new Usuario();
+                this.BuscarCuenta();
+              }
 
- this.navCtrl.setRoot(LoginPage);
+//Dirige al loginpage
+volver()
+        {
+          this.navCtrl.setRoot(LoginPage); 
+        }
 
-}
-
-submit(){
-
-  //activar cuenta usuario
-  var passw:any;
-
-   var user;
-   
-   this.miProvider.loginUser(String(this.usuario.email), String(this.usuario.password)).then(authData => {
-  		 user = firebase.auth().currentUser;
-  		 user.updateEmail(String(this.email)).then(function() {
-        // Update successful.
-     }, function(error) {
-          console.log("Error actualizando email");
-      });
-      
-  		user.updatePassword(String(this.password)).then(function() {
-       // Update successful.
-         }, function(error) {
-        console.log("Error actualizando password");
-               });
-  	}, error => {
-  console.log("error logging in!!!");
-  	})
-     this.usuario.email=this.email;
-     this.usuario.password=this.password;         
-     this.miProvider.activarCuenta(this.usuario);
+submit()
+       { //activar cuenta usuario
+         var passw:any;
+         var user;
+         this.usuario.login().then(authData => 
+                {  
+                   user = firebase.auth().currentUser;
+  		             user.updateEmail(String(this.usuario.getEmail())).then(function() 
+                       {
+                         //actualizacion de email exitosa. 
+                       }, function(error) 
+                                        {
+                                         console.log("Error actualizando email");
+                                        });
+                    user.updatePassword(String(this.usuario.getPassword())).then(function() 
+                        {
+                        // actualizacion de clave exitosa.
+                      }, function(error) 
+                                        {
+                                         console.log("Error actualizando password");
+                                        });
+  	                  }, error => {
+                                   console.log("error logging in!!!");
+   	                              })
+     this.usuario.setEmail(this.email);
+     this.usuario.setPassword(this.password);         
+     this.usuario.activarCuenta();
      this.navCtrl.push(BienvenidoPage,{usuario:this.usuario});
 }
 
@@ -69,40 +72,36 @@ BuscarCuenta(){
  
  var that=this;
 
-  this.miProvider.database_usuarios.once('value', function(snapshot) { 
-  var clave=that.clave;
-  var i=0;
-  
-
-
-  snapshot.forEach(function(childSnapshot) {//Iteracion sobre la lista snapshot es la raiz, y childSnapshot es cada hijo, cada elemento de la tabla q uno quiere.
-    var childKey = childSnapshot.key;
-    var childData = childSnapshot.val();
-    
-    
-    if(childData.claveActivacion==clave){
-
-    that.usuario={
-         id:childKey,
-         apto:childData.apto,
-         nombre:childData.nombre,
-         apellido:childData.apellido,
-         ctaActiva:"true",
-         administrador:"false",
-         email:childData.email,
-         password:childData.password,
-         claveActivacion:clave
-    }  
-    console.log("Usuarios--->"+JSON.stringify(that.usuario));
+  this.usuario.getUsuariosRef().then(snapshot => 
+      {
+        var clave=that.clave;
+        var i=0;
+        snapshot.forEach(function(childSnapshot) 
+              {
+                 var childKey = childSnapshot.key;
+                 var childData = childSnapshot.val();
+                 if(childData.claveActivacion==clave)
+                            {
+                  
+                                that.usuario.setId(childKey),
+                                that.usuario.setApto(childData.apto),
+                                that.usuario.setNombre(childData.nombre),
+                                that.usuario.setApellido(childData.apellido),
+                                that.usuario.setCtaActiva(true),
+                                that.usuario.setAdministrador(false),
+                                that.usuario.setEmail(childData.email),
+                                that.usuario.setPassword(childData.password),
+                                that.usuario.setClaveActivacion(clave)
       
-        }
-        else{
-          console.log("not our guy!!!\n");
-        }
-    i++;
-  });
+                            }
+                else 
+                    {
+                      //usuario incorrecto
+                    }
+                i++;
+              });
    
-});
+       });
 
   
  

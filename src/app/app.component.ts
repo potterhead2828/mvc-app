@@ -10,7 +10,7 @@ import { BuzonPage } from '../pages/buzon/buzon';
 import { EnviarMensajePage } from '../pages/enviar-mensaje/enviar-mensaje';
 import { PagosPage } from '../pages/pagos/pagos';
 import { LoginPage } from "../pages/login/login";
-import { HomeAdminPage } from "../pages/home-admin/home-admin";
+import { HomeAdminPage } from "../pages/ModoAdministradorTabs/home-admin/home-admin";
 
 @Component({
   templateUrl: 'app.html'

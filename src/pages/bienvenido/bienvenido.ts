@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpProvider } from "../../providers/http/http";
 import { HomePage } from "../home/home";
 import { LoginPage } from "../login/login";
+import { Usuario } from "../../app/models/Usuario";
 
 /**
  * Generated class for the BienvenidoPage page.
@@ -16,19 +17,24 @@ import { LoginPage } from "../login/login";
   templateUrl: 'bienvenido.html',
   providers: [HttpProvider]
 })
+
 export class BienvenidoPage {
-public usuario;
-public nombre;
-  constructor(public navCtrl: NavController, public params: NavParams, public miProvider:HttpProvider) {
-    this.usuario=params.get("usuario");
-    this.nombre=this.usuario.nombre;
-  }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad BienvenidoPage');
-  }
-goLogin(){
-  this.navCtrl.setRoot(LoginPage);
+   usuario:Usuario;
+   nombre;
+   apellido;
+   //Constructor se ejecuta cuando pagina Bienvenido.html se carga.   
+   constructor(public navCtrl: NavController, public params: NavParams, public miProvider:HttpProvider) 
+         {
+          this.usuario=params.get("usuario");
+          this.nombre=this.usuario.getNombre();
+          this.apellido=this.usuario.getApellido()
+         }
 
-}
+  
+goLogin()
+        {
+         this.navCtrl.setRoot(LoginPage);
+        }
+
 }

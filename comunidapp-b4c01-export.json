@@ -1,0 +1,475 @@
+{
+  "BuzonJunta" : {
+    "-KnlnUH4_lJqTLXZjC6j" : {
+      "Asunto" : "Hola Junta",
+      "Fecha" : "28/6/2017",
+      "Mensaje" : "xoxo",
+      "Remitente" : "Adriana Parra",
+      "RemitenteID" : "SvTVLgvNTdfSvNITjYVMJaw51Aq1"
+    },
+    "-Knlo_51VQRgL0pXkeuU" : {
+      "Asunto" : "hi",
+      "Fecha" : "28/6/2017",
+      "Mensaje" : "xoxo",
+      "Remitente" : "Adriana Parra",
+      "RemitenteID" : "SvTVLgvNTdfSvNITjYVMJaw51Aq1"
+    },
+    "-KnoJkismeSgG2Tj4uo9" : {
+      "Asunto" : "Llamada Telefonica",
+      "Fecha" : "29/6/2017",
+      "Mensaje" : "Buenos dias, necesito por favor, alguien de la junta que se comunique conmigo inmediatamente via telefonica al 04242986558.\n\nLo agradezco,\nSaludos",
+      "Remitente" : "Adriana Parra",
+      "RemitenteID" : "SvTVLgvNTdfSvNITjYVMJaw51Aq1"
+    },
+    "-KnoZUSXzHmCTvWCfCEc" : {
+      "Asunto" : "PROPIETARIO2",
+      "Fecha" : "29/6/2017",
+      "Mensaje" : "xxx",
+      "Remitente" : "Barry Allen",
+      "RemitenteID" : "1wGCjjvxPyY6Np6MccsAVaO7kSp1"
+    },
+    "-KnoZa3EVAVW-O8CxVJB" : {
+      "Asunto" : "PROPIETARIO3",
+      "Fecha" : "29/6/2017",
+      "Mensaje" : "XXX",
+      "Remitente" : "Adriana Parra",
+      "RemitenteID" : "SvTVLgvNTdfSvNITjYVMJaw51Aq1"
+    },
+    "-Ko-5Q-QJPFL06NQZpls" : {
+      "Asunto" : "league of assasins",
+      "Fecha" : "1/7/2017",
+      "Mensaje" : "xxx",
+      "Remitente" : "Iris West",
+      "RemitenteID" : "Lwdu4PMBl1M4D0hB51s0OW6izkW2"
+    },
+    "-Ko0ITbyE88kWh-giI_P" : {
+      "Asunto" : "2",
+      "Fecha" : "1/7/2017",
+      "Mensaje" : "2",
+      "Remitente" : "Barry Allen",
+      "RemitenteID" : "1wGCjjvxPyY6Np6MccsAVaO7kSp1"
+    },
+    "1wGCjjvxPyY6Np6MccsAVaO7kSp1" : {
+      "-Ko2nzl-NLpH38-OtXXe" : {
+        "Asunto" : "Call me zoom is back",
+        "Fecha" : "2/7/2017",
+        "Mensaje" : "he is back!",
+        "Remitente" : "Junta de Condominio"
+      }
+    },
+    "mensajeid" : {
+      "Asunto" : "",
+      "Fecha" : "",
+      "Mensaje" : "",
+      "Remitente" : "",
+      "RemitenteID" : ""
+    }
+  },
+  "BuzonPropietario" : {
+    "1wGCjjvxPyY6Np6MccsAVaO7kSp1" : {
+      "-KnlHs69xYdFR1_ake4g" : {
+        "Asunto" : "¡Bienvenido al edificio!",
+        "Fecha" : "28/6/2017",
+        "Mensaje" : "La Junta de condominio de esta residencia quiere brindarle ante todo un gran saludo y una cordial bienvenida a nuestra comunidad.\n\nDe mas esta decirle que estamos a su orden para lo que necesite.\n\nSaludos Cordiales!!!",
+        "Remitente" : "Junta de Condominio"
+      },
+      "-Knldy2cMCxWCwQvZSYh" : {
+        "Asunto" : "Hola Barry",
+        "Fecha" : "28/6/2017",
+        "Mensaje" : "xoxo",
+        "Remitente" : "Junta de Condominio"
+      },
+      "-KnoKH6XCX6g8nPA6BYK" : {
+        "Asunto" : "Aviso de Cobro",
+        "Fecha" : "29/6/2017",
+        "Mensaje" : "Señor Allen por favor ponganse al dia.\n\nSaludos",
+        "Remitente" : "Junta de Condominio"
+      },
+      "-KnoXp6G7GQMxLefX0op" : {
+        "Asunto" : "Hi ya!!!xx",
+        "Fecha" : "29/6/2017",
+        "Mensaje" : "x",
+        "Remitente" : "Junta de Condominio"
+      },
+      "-KnzvtDJG4gm6ZYip8dg" : {
+        "Asunto" : "call me bar!!!",
+        "Fecha" : "1/7/2017",
+        "Mensaje" : "ASAP XOXO",
+        "Remitente" : "Junta de Condominio"
+      }
+    },
+    "H0TSNCxv3oXZ0THlnRip2sW3Or83" : {
+      "mensajeid" : {
+        "Asunto" : "",
+        "Fecha" : "",
+        "Mensaje" : "",
+        "Remitente" : ""
+      }
+    },
+    "Lwdu4PMBl1M4D0hB51s0OW6izkW2" : {
+      "-Knle2psUX18KcIG4h2E" : {
+        "Asunto" : "Hola Iris",
+        "Fecha" : "28/6/2017",
+        "Mensaje" : "xoxo",
+        "Remitente" : "Junta de Condominio"
+      },
+      "mensajeid" : {
+        "Asunto" : "",
+        "Fecha" : "",
+        "Mensaje" : "",
+        "Remitente" : ""
+      }
+    },
+    "SvTVLgvNTdfSvNITjYVMJaw51Aq1" : {
+      "-Knle57FsdK39BcHz9cH" : {
+        "Asunto" : "Hello Adriana",
+        "Fecha" : "28/6/2017",
+        "Mensaje" : "xoxo",
+        "Remitente" : "Junta de Condominio"
+      },
+      "-KnlogqMfagzVGNGwfzw" : {
+        "Asunto" : "Adri llamame!!!",
+        "Fecha" : "28/6/2017",
+        "Mensaje" : "ddd",
+        "Remitente" : "Junta de Condominio"
+      },
+      "-KnoTUaRFlvqhU2CzLbc" : {
+        "Asunto" : "hi you!!!",
+        "Fecha" : "29/6/2017",
+        "Mensaje" : "hahahahahah",
+        "Remitente" : "Junta de Condominio"
+      },
+      "-KnoTe5DmXctuPiwxhV3" : {
+        "Asunto" : "Paga paga paga!!",
+        "Fecha" : "29/6/2017",
+        "Mensaje" : "oxoxoxo",
+        "Remitente" : "Junta de Condominio"
+      },
+      "-Knzvq1z9fLntiRGrcqN" : {
+        "Asunto" : "call me maybe",
+        "Fecha" : "1/7/2017",
+        "Mensaje" : "xxoxooxo",
+        "Remitente" : "Junta de Condominio"
+      },
+      "mensajeid" : {
+        "Asunto" : "",
+        "Fecha" : "",
+        "Mensaje" : "",
+        "Remitente" : ""
+      }
+    },
+    "yUtmYwTuIXS8BGQj0buidn9sDpu1" : {
+      "mensajeid" : {
+        "Asunto" : "",
+        "Fecha" : "",
+        "Mensaje" : "",
+        "Remitente" : ""
+      }
+    }
+  },
+  "Cartelera" : {
+    "-KlGpVaytk9mSaK6bK0R" : {
+      "Fecha" : "1/7/2017",
+      "Texto" : "El recibo del mes de Junio reflejara una cuota especial de 1789000 bsf, por concepto de reparacion de ascensores.",
+      "Titulo" : "CuotaSUPEREXTRA para Junio"
+    },
+    "-KlGtkXZiM_gXvBLmuhg" : {
+      "Fecha" : "1/7/2017",
+      "Texto" : "Interesados comunicarse al 04242986558, persona de contacto Maria Lopez.",
+      "Titulo" : "Apto 4-5C en Venta"
+    },
+    "-KlRRlyv3IORcQqNeklv" : {
+      "Fecha" : "1/6/2017",
+      "Texto" : "Hidrocapital anuncio corte de agua por tres dias a partir del proximo lunes.",
+      "Titulo" : "Racionamiento agua"
+    },
+    "-KnlI1PnRgXirE9kLWB_" : {
+      "Texto" : "A partir de las 8:00 am se tiene prevista una actividad de protesta. Tome sus previsiones",
+      "Titulo" : "Trancazo Dia de mañana"
+    },
+    "-KnoIhU-gkPQP1Z9h9PF" : {
+      "Texto" : "El ascensor del lobby fue renovado exitosamente y listo para usarse.",
+      "Titulo" : "Ascensor Ppal Renovado"
+    },
+    "-KnyhK8ToBHV6N6PjqKh" : {
+      "Texto" : "Por motivo de avería en la planta 52 del distrito capital, no habra servicio de agua por 4 dias.",
+      "Titulo" : "Nuevo Corte De Agua"
+    },
+    "-KnyhfWV4LQ0A0JUg-TV" : {
+      "Texto" : "x",
+      "Titulo" : "x"
+    },
+    "-Ko0IXu1afzt1uPiXzQ9" : {
+      "Texto" : "d",
+      "Titulo" : "d"
+    }
+  },
+  "CuentaPropietario" : {
+    "1wGCjjvxPyY6Np6MccsAVaO7kSp1" : {
+      "SaldoAFavor" : 0,
+      "SaldoDeudor" : 0
+    },
+    "H0TSNCxv3oXZ0THlnRip2sW3Or83" : {
+      "SaldoAFavor" : 0,
+      "SaldoDeudor" : 520000
+    },
+    "Lwdu4PMBl1M4D0hB51s0OW6izkW2" : {
+      "SaldoAFavor" : 0,
+      "SaldoDeudor" : 520000
+    },
+    "SvTVLgvNTdfSvNITjYVMJaw51Aq1" : {
+      "SaldoAFavor" : 0,
+      "SaldoDeudor" : 520000
+    },
+    "yUtmYwTuIXS8BGQj0buidn9sDpu1" : {
+      "SaldoAFavor" : 0,
+      "SaldoDeudor" : 520000
+    }
+  },
+  "Pagos" : {
+    "1wGCjjvxPyY6Np6MccsAVaO7kSp1" : {
+      "-Ko3XPvKz19EC2l5MFFn" : {
+        "Banco" : "Provincial",
+        "Concepto" : "Pago parcial",
+        "Fecha" : "2/7/2017",
+        "Monto" : 100000,
+        "PropietarioID" : "1wGCjjvxPyY6Np6MccsAVaO7kSp1",
+        "Referencia" : "12",
+        "Tipo" : "Deposito"
+      },
+      "-Ko3XZnjkzul0UKnW2yp" : {
+        "Banco" : "Provincial",
+        "Concepto" : "Saldo a favor",
+        "Fecha" : "2/7/2017",
+        "Monto" : "400000",
+        "PropietarioID" : "1wGCjjvxPyY6Np6MccsAVaO7kSp1",
+        "Referencia" : "12",
+        "Tipo" : "Deposito"
+      },
+      "-Ko3XpKCKaZRmap9Xe4q" : {
+        "Banco" : "Banesco",
+        "Concepto" : "Pago total",
+        "Fecha" : "2/7/2017",
+        "Monto" : 100000,
+        "PropietarioID" : "1wGCjjvxPyY6Np6MccsAVaO7kSp1",
+        "Referencia" : "23",
+        "Tipo" : "Deposito"
+      },
+      "pagoid" : {
+        "Banco" : "",
+        "Concepto" : "",
+        "Fecha" : "",
+        "Monto" : "",
+        "PropietarioID" : "1wGCjjvxPyY6Np6MccsAVaO7kSp1",
+        "Referencia" : "",
+        "Tipo" : ""
+      }
+    },
+    "H0TSNCxv3oXZ0THlnRip2sW3Or83" : {
+      "pagoid" : {
+        "Banco" : "",
+        "Concepto" : "",
+        "Fecha" : "",
+        "Monto" : "",
+        "PropietarioID" : "H0TSNCxv3oXZ0THlnRip2sW3Or83",
+        "Referencia" : "",
+        "Tipo" : ""
+      }
+    },
+    "Lwdu4PMBl1M4D0hB51s0OW6izkW2" : {
+      "pagoid" : {
+        "Banco" : "",
+        "Concepto" : "",
+        "Fecha" : "",
+        "Monto" : "",
+        "PropietarioID" : "Lwdu4PMBl1M4D0hB51s0OW6izkW2",
+        "Referencia" : "",
+        "Tipo" : "Deposito"
+      }
+    },
+    "SvTVLgvNTdfSvNITjYVMJaw51Aq1" : {
+      "pagoid" : {
+        "Banco" : "",
+        "Concepto" : "",
+        "Fecha" : "",
+        "Monto" : "",
+        "PropietarioID" : "SvTVLgvNTdfSvNITjYVMJaw51Aq1",
+        "Referencia" : "",
+        "Tipo" : "Deposito"
+      }
+    },
+    "yUtmYwTuIXS8BGQj0buidn9sDpu1" : {
+      "pagoid" : {
+        "Banco" : "",
+        "Concepto" : "",
+        "Fecha" : "",
+        "Monto" : "",
+        "PropietarioID" : "yUtmYwTuIXS8BGQj0buidn9sDpu1",
+        "Referencia" : "",
+        "Tipo" : ""
+      }
+    }
+  },
+  "Recibo" : {
+    "Abril2017" : {
+      "Fecha" : "2/7/2017",
+      "Monto" : "100000"
+    },
+    "Enero2017" : {
+      "Fecha" : "2/7/2017",
+      "Monto" : "100000"
+    },
+    "Febrero2017" : {
+      "Fecha" : "2/7/2017",
+      "Monto" : "120000"
+    },
+    "Marzon2017" : {
+      "Fecha" : "2/7/2017",
+      "Monto" : "200000"
+    }
+  },
+  "RecibosPagados" : {
+    "1wGCjjvxPyY6Np6MccsAVaO7kSp1" : {
+      "Abril2017" : {
+        "deuda" : 0,
+        "reciboid" : "Abril2017"
+      },
+      "Enero2017" : {
+        "deuda" : 0,
+        "reciboid" : "Enero2017"
+      },
+      "Febrero2017" : {
+        "deuda" : 0,
+        "reciboid" : "Febrero2017"
+      },
+      "Marzon2017" : {
+        "deuda" : 0,
+        "reciboid" : "Marzon2017"
+      }
+    },
+    "H0TSNCxv3oXZ0THlnRip2sW3Or83" : {
+      "Abril2017" : {
+        "deuda" : "100000",
+        "reciboid" : "Abril2017"
+      },
+      "Enero2017" : {
+        "deuda" : "100000",
+        "reciboid" : "Enero2017"
+      },
+      "Febrero2017" : {
+        "deuda" : "120000",
+        "reciboid" : "Febrero2017"
+      },
+      "Marzon2017" : {
+        "deuda" : "200000",
+        "reciboid" : "Marzon2017"
+      }
+    },
+    "Lwdu4PMBl1M4D0hB51s0OW6izkW2" : {
+      "Abril2017" : {
+        "deuda" : "100000",
+        "reciboid" : "Abril2017"
+      },
+      "Enero2017" : {
+        "deuda" : "100000",
+        "reciboid" : "Enero2017"
+      },
+      "Febrero2017" : {
+        "deuda" : "120000",
+        "reciboid" : "Febrero2017"
+      },
+      "Marzon2017" : {
+        "deuda" : "200000",
+        "reciboid" : "Marzon2017"
+      }
+    },
+    "SvTVLgvNTdfSvNITjYVMJaw51Aq1" : {
+      "Abril2017" : {
+        "deuda" : "100000",
+        "reciboid" : "Abril2017"
+      },
+      "Enero2017" : {
+        "deuda" : "100000",
+        "reciboid" : "Enero2017"
+      },
+      "Febrero2017" : {
+        "deuda" : "120000",
+        "reciboid" : "Febrero2017"
+      },
+      "Marzon2017" : {
+        "deuda" : "200000",
+        "reciboid" : "Marzon2017"
+      }
+    },
+    "yUtmYwTuIXS8BGQj0buidn9sDpu1" : {
+      "Abril2017" : {
+        "deuda" : "100000",
+        "reciboid" : "Abril2017"
+      },
+      "Enero2017" : {
+        "deuda" : "100000",
+        "reciboid" : "Enero2017"
+      },
+      "Febrero2017" : {
+        "deuda" : "120000",
+        "reciboid" : "Febrero2017"
+      },
+      "Marzon2017" : {
+        "deuda" : "200000",
+        "reciboid" : "Marzon2017"
+      }
+    }
+  },
+  "Usuarios" : {
+    "1wGCjjvxPyY6Np6MccsAVaO7kSp1" : {
+      "administrador" : false,
+      "apellido" : "Allen",
+      "apto" : "1-B",
+      "claveActivacion" : "BA",
+      "ctaActiva" : true,
+      "email" : "propietario2@me.com",
+      "nombre" : "Barry",
+      "password" : "123456789"
+    },
+    "H0TSNCxv3oXZ0THlnRip2sW3Or83" : {
+      "administrador" : true,
+      "apellido" : "Diggle",
+      "apto" : "2-B",
+      "claveActivacion" : "OP",
+      "ctaActiva" : "true",
+      "email" : "administrador1@me.com",
+      "nombre" : "John",
+      "password" : "123456789"
+    },
+    "Lwdu4PMBl1M4D0hB51s0OW6izkW2" : {
+      "administrador" : false,
+      "apellido" : "West",
+      "apto" : "1-A",
+      "claveActivacion" : "IW",
+      "ctaActiva" : "true",
+      "email" : "propietario1@me.com",
+      "nombre" : "Iris",
+      "password" : "123456789"
+    },
+    "SvTVLgvNTdfSvNITjYVMJaw51Aq1" : {
+      "administrador" : false,
+      "apellido" : "Parra",
+      "apto" : "penhouse",
+      "claveActivacion" : "A",
+      "ctaActiva" : "true",
+      "email" : "propietario3@me.com",
+      "nombre" : "Adriana",
+      "password" : "123456789"
+    },
+    "yUtmYwTuIXS8BGQj0buidn9sDpu1" : {
+      "administrador" : true,
+      "apellido" : "Queen",
+      "apto" : "3-A",
+      "claveActivacion" : "OQ",
+      "ctaActiva" : "true",
+      "email" : "administrador2@me.com",
+      "nombre" : "Oliver",
+      "password" : "123456789"
+    }
+  }
+}

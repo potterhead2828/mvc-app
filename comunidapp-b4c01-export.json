@@ -49,11 +49,37 @@
       "Remitente" : "Barry Allen",
       "RemitenteID" : "1wGCjjvxPyY6Np6MccsAVaO7kSp1"
     },
+    "-Ko3YVw4UQ6w3tZt-k0D" : {
+      "Asunto" : "LLAMAME IRIS",
+      "Fecha" : "2/7/2017",
+      "Mensaje" : "JAJAJA",
+      "Remitente" : "Barry Allen",
+      "RemitenteID" : "1wGCjjvxPyY6Np6MccsAVaO7kSp1"
+    },
+    "-Ko3Z8Lr85OQkcc-eZ5N" : {
+      "Asunto" : "CALLME JOE",
+      "Fecha" : "2/7/2017",
+      "Mensaje" : "DDD",
+      "Remitente" : "Barry Allen",
+      "RemitenteID" : "1wGCjjvxPyY6Np6MccsAVaO7kSp1"
+    },
     "1wGCjjvxPyY6Np6MccsAVaO7kSp1" : {
       "-Ko2nzl-NLpH38-OtXXe" : {
         "Asunto" : "Call me zoom is back",
         "Fecha" : "2/7/2017",
         "Mensaje" : "he is back!",
+        "Remitente" : "Junta de Condominio"
+      },
+      "-Ko3YDVDBsZAPPR36g1z" : {
+        "Asunto" : "ZOOM ",
+        "Fecha" : "2/7/2017",
+        "Mensaje" : "ZOOM NUMBER WHAT?",
+        "Remitente" : "Junta de Condominio"
+      },
+      "-Ko3ZF9_QG38IZQwnp1B" : {
+        "Asunto" : "te llame del cel de joe q paso=?",
+        "Fecha" : "2/7/2017",
+        "Mensaje" : "xoxoxo",
         "Remitente" : "Junta de Condominio"
       }
     },
@@ -95,6 +121,18 @@
         "Asunto" : "call me bar!!!",
         "Fecha" : "1/7/2017",
         "Mensaje" : "ASAP XOXO",
+        "Remitente" : "Junta de Condominio"
+      },
+      "-Ko3_Qr9S22IUqJ1znUJ" : {
+        "Asunto" : "Faste man alive callme",
+        "Fecha" : "2/7/2017",
+        "Mensaje" : "xxx",
+        "Remitente" : "Junta de Condominio"
+      },
+      "-Ko3aLgJGrG2rbvZSCq4" : {
+        "Asunto" : "what?",
+        "Fecha" : "2/7/2017",
+        "Mensaje" : "xx",
         "Remitente" : "Junta de Condominio"
       }
     },
@@ -204,6 +242,14 @@
       "Titulo" : "d"
     }
   },
+  "Consulta" : {
+    "activa" : true,
+    "fecha" : "2/7/2017",
+    "no" : 0,
+    "pregunta" : "¿Esta de acuerdo con cambiar de compañía de vigilancia?",
+    "resultado" : "",
+    "si" : 0
+  },
   "CuentaPropietario" : {
     "1wGCjjvxPyY6Np6MccsAVaO7kSp1" : {
       "SaldoAFavor" : 0,
@@ -214,12 +260,12 @@
       "SaldoDeudor" : 520000
     },
     "Lwdu4PMBl1M4D0hB51s0OW6izkW2" : {
-      "SaldoAFavor" : 0,
-      "SaldoDeudor" : 520000
+      "SaldoAFavor" : 80000,
+      "SaldoDeudor" : 0
     },
     "SvTVLgvNTdfSvNITjYVMJaw51Aq1" : {
       "SaldoAFavor" : 0,
-      "SaldoDeudor" : 520000
+      "SaldoDeudor" : 500000
     },
     "yUtmYwTuIXS8BGQj0buidn9sDpu1" : {
       "SaldoAFavor" : 0,
@@ -277,6 +323,15 @@
       }
     },
     "Lwdu4PMBl1M4D0hB51s0OW6izkW2" : {
+      "-Ko45GZfPNrTgMYpeOwt" : {
+        "Banco" : "Venezuela",
+        "Concepto" : "Saldo a favor",
+        "Fecha" : "2/7/2017",
+        "Monto" : "600000",
+        "PropietarioID" : "Lwdu4PMBl1M4D0hB51s0OW6izkW2",
+        "Referencia" : "00-00",
+        "Tipo" : "Deposito"
+      },
       "pagoid" : {
         "Banco" : "",
         "Concepto" : "",
@@ -288,6 +343,15 @@
       }
     },
     "SvTVLgvNTdfSvNITjYVMJaw51Aq1" : {
+      "-Ko4Dr7CRs5D4TpAgbbC" : {
+        "Banco" : "Banesco",
+        "Concepto" : "Pago parcial",
+        "Fecha" : "2/7/2017",
+        "Monto" : 20000,
+        "PropietarioID" : "SvTVLgvNTdfSvNITjYVMJaw51Aq1",
+        "Referencia" : "789",
+        "Tipo" : "Transferencia"
+      },
       "pagoid" : {
         "Banco" : "",
         "Concepto" : "",
@@ -367,37 +431,37 @@
     },
     "Lwdu4PMBl1M4D0hB51s0OW6izkW2" : {
       "Abril2017" : {
-        "deuda" : "100000",
+        "deuda" : 0,
         "reciboid" : "Abril2017"
       },
       "Enero2017" : {
-        "deuda" : "100000",
+        "deuda" : 0,
         "reciboid" : "Enero2017"
       },
       "Febrero2017" : {
-        "deuda" : "120000",
+        "deuda" : 0,
         "reciboid" : "Febrero2017"
       },
       "Marzon2017" : {
-        "deuda" : "200000",
+        "deuda" : 0,
         "reciboid" : "Marzon2017"
       }
     },
     "SvTVLgvNTdfSvNITjYVMJaw51Aq1" : {
       "Abril2017" : {
-        "deuda" : "100000",
+        "deuda" : 80000,
         "reciboid" : "Abril2017"
       },
       "Enero2017" : {
-        "deuda" : "100000",
+        "deuda" : 100000,
         "reciboid" : "Enero2017"
       },
       "Febrero2017" : {
-        "deuda" : "120000",
+        "deuda" : 120000,
         "reciboid" : "Febrero2017"
       },
       "Marzon2017" : {
-        "deuda" : "200000",
+        "deuda" : 200000,
         "reciboid" : "Marzon2017"
       }
     },
@@ -470,6 +534,23 @@
       "email" : "administrador2@me.com",
       "nombre" : "Oliver",
       "password" : "123456789"
+    }
+  },
+  "Voto" : {
+    "1wGCjjvxPyY6Np6MccsAVaO7kSp1" : {
+      "voto" : false
+    },
+    "H0TSNCxv3oXZ0THlnRip2sW3Or83" : {
+      "voto" : false
+    },
+    "Lwdu4PMBl1M4D0hB51s0OW6izkW2" : {
+      "voto" : false
+    },
+    "SvTVLgvNTdfSvNITjYVMJaw51Aq1" : {
+      "voto" : false
+    },
+    "yUtmYwTuIXS8BGQj0buidn9sDpu1" : {
+      "voto" : false
     }
   }
 }

@@ -4,7 +4,7 @@ export class Cartelera
 
 {
   private bd_Cartelera=firebase.database().ref('Cartelera');
-  private bd_titulos=firebase.database().ref('Cartelera').orderByChild('Fecha').limitToLast(5);
+  private bd_titulos=firebase.database().ref('Cartelera').orderByChild('Fecha').limitToLast(3);
   
   constructor()
   {

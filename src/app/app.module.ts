@@ -23,6 +23,7 @@ import { BienvenidoPage } from "../pages/bienvenido/bienvenido";
 import { PublicarReciboPage } from "../pages/publicar-recibo/publicar-recibo";
 import { RegitrarPagoPage } from "../pages/regitrar-pago/regitrar-pago";
 import { ImprimirMensajePage } from "../pages/imprimir-mensaje/imprimir-mensaje";
+import { PublicarConsultaPage } from "../pages/publicar-consulta/publicar-consulta";
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { ImprimirMensajePage } from "../pages/imprimir-mensaje/imprimir-mensaje"
     ActivarCuentaPage,
     BienvenidoPage,
     PublicarReciboPage,
-    ImprimirMensajePage
+    ImprimirMensajePage,
+    PublicarConsultaPage
 
 
  
@@ -75,7 +77,8 @@ import { ImprimirMensajePage } from "../pages/imprimir-mensaje/imprimir-mensaje"
     ActivarCuentaPage,
     BienvenidoPage,
     PublicarReciboPage,
-    ImprimirMensajePage
+    ImprimirMensajePage,
+    PublicarConsultaPage
     
   ],
   providers: [

@@ -1,0 +1,35 @@
+<!--
+  Generated template for the PublicarConsultaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-tabs>
+    <ion-tab [root]="modificarCarteleraRoot" tabTitle="Modificar cartelera" tabIcon="calendar"></ion-tab>
+    <ion-tab [root]="administrarPagosRoot" tabTitle="Administrar pagos" tabIcon="cash"></ion-tab>
+    <ion-tab [root]="escribirAPropietarioRoot" tabTitle="Escribir a propietario" tabIcon="chatboxes"></ion-tab>
+    <ion-tab [root]="activarConsultaRoot" tabTitle="Activar consulta" tabIcon="clipboard"></ion-tab>
+</ion-tabs>
+
+<ion-header>
+  <ion-navbar color="primary"> 
+    <button ion-button (click)="irHomePropietario()">
+       <p style="font-weight: bold; font-size:15px;font-size:15px;">Cerrar modo Administrador</p>
+    </button>
+
+           
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+<ion-list>
+  <ion-item>   
+        <ion-label floating>Pregunta</ion-label>
+
+        <ion-textarea elastic type="text"[(ngModel)]="pregunta"></ion-textarea>
+   
+  </ion-item>
+    <div padding>
+      <button ion-button color="danger" block (click)="consultar()">activar consulta</button>
+    </div>
+</ion-list>   
+</ion-content>

@@ -6,7 +6,6 @@ export class Usuario {
     
 private bd_usuarios=firebase.database().ref('Usuarios');
 private fireAuth=firebase.auth();
-
 private administrador:boolean;
 private nombre:string;
 private apellido:string;
@@ -38,7 +37,8 @@ crear(email: string , password: string)
                   claveActivacion:"",
                   nombre:"",
                   apellido:"",
-                  apto:""
+                  apto:"",
+                 
 		        });	
 		  });
 	});
@@ -144,6 +144,7 @@ getUsuariosRef()
  {
    return this.bd_usuarios.once('value');   
  }
+
 
 
 //Para utilizar el retorno de esta funcion, hay que utilizar .then para obtener el snapshot de la data.

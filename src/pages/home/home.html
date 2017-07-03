@@ -22,7 +22,20 @@
 </button>
   </ion-card-content>  
   </ion-card>
-
+  <ion-card>
+  <ion-card-content>
+    <p style=" font-size:15px;font-size:18px; color:purple">
+  <ion-icon name="clipboard" large></ion-icon>¡Participe!<br>{{pregunta}}</p>
+    <button ion-button icon-left (click)="votarSi()">
+  <ion-icon name="add-circle"  ></ion-icon>
+       Si
+</button>
+ <button ion-button icon-left (click)="votarNo()" >
+  <ion-icon name="remove-circle"></ion-icon>
+       No
+</button>
+  </ion-card-content>  
+  </ion-card>
    <ion-list-header color="danger">
     Ultimos Anuncios en Cartelera
   </ion-list-header> 

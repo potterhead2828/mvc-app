@@ -15,7 +15,17 @@
 </ion-header>
 
 <ion-content padding >
+  <ion-card-content>
+    <p style="font-weight: bold;font-size:15px;font-size:18px; color:white">
+  <ion-icon name="clipboard" large></ion-icon>Resultado de la consulta activa : <br><br>Si:_{{si}} votos <br>No:_{{no}} votos</p>
 
+  </ion-card-content>  
+<button ion-button icon-right (click)="nuevaConsulta()" >
+  nueva consulta
+  <ion-icon name="add"></ion-icon>
+</button>
 
-
+<button ion-button icon-right (click)="finalizarConsulta()">
+  finalizar consulta activa
+</button>
 </ion-content>

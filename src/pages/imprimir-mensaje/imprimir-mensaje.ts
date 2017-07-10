@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HomePage } from "../home/home";
 
 /**
  * Generated class for the ImprimirMensajePage page.
@@ -22,6 +23,9 @@ export class ImprimirMensajePage {
      this.mensaje=params.get("mensaje");
   }
 
+goBack(){
+       this.navCtrl.setRoot(HomePage);
+}
  
 
 }

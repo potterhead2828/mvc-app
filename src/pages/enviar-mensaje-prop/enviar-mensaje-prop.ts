@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { HttpProvider } from "../../providers/http/http";
 import { HomePage } from "../home/home";
 import { Usuario } from "../../app/models/Usuario";
 import { BuzonJunta } from "../../app/models/BuzonJunta";
-import * as firebase from 'firebase';
 import { ImprimirMensajePage } from "../imprimir-mensaje/imprimir-mensaje";
 import { BuzonPropietario } from "../../app/models/BuzonPropietario";
 
@@ -33,7 +32,7 @@ export class EnviarMensajePropPage {
          f:any;
 
   //Constructor se ejecuta cuando la pagina enviar-mensaje-prop.html se ejecuta
-  constructor(public navCtrl: NavController, public params: NavParams, private miProvider:HttpProvider) 
+  constructor(public navCtrl: NavController, public params: NavParams) 
          {  
             this.usuario=new Usuario();
             this.buzonJunta= new BuzonJunta();

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {NavController, NavParams } from 'ionic-angular';
 import { HttpProvider } from "../../providers/http/http";
 import * as firebase from 'firebase';
 import { Usuario } from "../../app/models/Usuario";
@@ -23,7 +23,7 @@ export class HistorialPagosPage {
    pagos=[];
     
    //constructor se ejecuta cuando la pagina historial-pagos.html se carga 
-   constructor(public navCtrl: NavController, public navParams: NavParams,public miProvider:HttpProvider) 
+   constructor(public navCtrl: NavController, public navParams: NavParams) 
              {
               this.usuario=new Usuario();
               this.pago=new Pago();

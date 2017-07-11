@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {NavController, NavParams } from 'ionic-angular';
 import { HttpProvider } from "../../providers/http/http";
 import { RegitrarPagoPage } from "../regitrar-pago/regitrar-pago";
 import { HistorialPagosPage } from "../historial-pagos/historial-pagos";
@@ -30,7 +30,7 @@ export class PagosPage {
   usuario:Usuario;
   cuenta:CuentaPropietario;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private miProvider:HttpProvider) 
+  constructor(public navCtrl: NavController, public navParams: NavParams) 
    { 
      this.usuario=new Usuario();
      this.recibo=new Recibo();
@@ -78,7 +78,7 @@ getCuentaPropietario()
                  {          console.log("snapshot2:_"+JSON.stringify(snapshot2));
                    snapshot2.forEach(function(childSnapshot) 
                             {
-                              var childKey = childSnapshot.key;
+                            
                               var childData = childSnapshot.val();
                               var fecha;
                               var monto;

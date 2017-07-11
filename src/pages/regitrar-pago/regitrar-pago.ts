@@ -38,7 +38,7 @@ export class RegitrarPagoPage {
    recibo:Recibo;
    reciboPagado:ReciboPagado;
 
-  constructor(public navCtrl: NavController, public params: NavParams,private miProvider:HttpProvider) 
+  constructor(public navCtrl: NavController, public params: NavParams) 
         {
           this.usuario=new Usuario();
           this.usuario.setId(firebase.auth().currentUser.uid);
@@ -67,12 +67,12 @@ registrarPago()
   var deudaTotal:number;
   var saldoAFavor:number;
   var deudaRecibo:number;
-  
+  var pago;
   deudaTotal=this.InfoPago.SaldoDeudor;
   saldoAFavor=this.InfoPago.SaldoAFavor-(-this.monto);
   if (saldoAFavor<deudaTotal)
       { 
-        var pago={ 
+         pago={ 
                   Monto:saldoAFavor,
                   Banco:this.banco,
                   Tipo:this.formaPago,
@@ -108,7 +108,7 @@ registrarPago()
 }
   if (saldoAFavor==deudaTotal)
      {
-       var pago={
+        pago={
                  Monto:saldoAFavor,
                  Banco:this.banco,
                  Tipo:this.formaPago,
@@ -127,7 +127,7 @@ registrarPago()
       }
   if (saldoAFavor>deudaTotal)
       {
-        var pago={
+         pago={
                   Monto:this.monto,
                   Banco:this.banco,
                   Tipo:this.formaPago,

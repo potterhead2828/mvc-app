@@ -25,7 +25,7 @@ export class LoginPage {
   email;
 	password;
 
-  constructor(private menu:MenuController, private alertCtrl: AlertController , private loadingCtrl: LoadingController, private navCtrl: NavController, private modalCtrl: ModalController, private miProvider: HttpProvider, private toastCtrl: ToastController) {
+  constructor(private menu:MenuController, private alertCtrl: AlertController , private loadingCtrl: LoadingController, private navCtrl: NavController, private modalCtrl: ModalController, private toastCtrl: ToastController) {
 		
   		  this.usuario=new Usuario();
         this.menu.swipeEnable(false); //Esto evita que se pueda usar la funcion slide del sidemenu para evitar el login

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-import * as firebase from 'firebase';
+
 
 /*
   Generated class for the HttpProvider provider.

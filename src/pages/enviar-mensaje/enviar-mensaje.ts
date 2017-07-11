@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {NavController, NavParams } from 'ionic-angular';
 import * as firebase from 'firebase';
 import { HttpProvider } from "../../providers/http/http";
 import { Usuario } from "../../app/models/Usuario";
@@ -27,7 +27,7 @@ export class EnviarMensajePage {
   fech:any;
   f:any;
   
-  constructor(public navCtrl: NavController, public navParams: NavParams, private miProvider:HttpProvider) 
+  constructor(public navCtrl: NavController, public navParams: NavParams) 
             {
              this.usuario=new Usuario();
              this.usuario.setId(firebase.auth().currentUser.uid);

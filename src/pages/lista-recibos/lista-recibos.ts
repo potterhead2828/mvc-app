@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {NavController, NavParams } from 'ionic-angular';
 import { Usuario } from "../../app/models/Usuario";
 import { Recibo } from "../../app/models/Recibo";
 import * as firebase from 'firebase';
@@ -37,7 +37,7 @@ export class ListaRecibosPage {
           var i=0;
           snapshot2.forEach(function(childSnapshot) 
                   {               
-                    var childKey = childSnapshot.key;
+                  
                     var childData = childSnapshot.val();
                     recibos[i]={
                               fecha:childData.Fecha,

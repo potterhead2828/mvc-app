@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { HttpProvider } from "../../providers/http/http";
 import { HomePage } from "../home/home";
 import { LoginPage } from "../login/login";
@@ -24,7 +24,7 @@ export class BienvenidoPage {
    nombre;
    apellido;
    //Constructor se ejecuta cuando pagina Bienvenido.html se carga.   
-   constructor(public navCtrl: NavController, public params: NavParams, public miProvider:HttpProvider) 
+   constructor(public navCtrl: NavController, public params: NavParams) 
          {
           this.usuario=params.get("usuario");
           this.nombre=this.usuario.getNombre();

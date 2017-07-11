@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { HttpProvider } from "../../providers/http/http";
 import { Cartelera } from "../../app/models/Cartelera";
 
@@ -24,7 +24,7 @@ texto:any;
 cartelera:Cartelera;
   
   //El contrustor se ejecuta cuando se carga la pagina leer-anuncio.html
-  constructor(public navCtrl: NavController, public params: NavParams, private miProvider:HttpProvider) 
+  constructor(public navCtrl: NavController, public params: NavParams) 
        {
          this.cartelera=new Cartelera();
          this.anuncioID=params.get("id");

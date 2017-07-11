@@ -37,7 +37,7 @@ export class HomePage {
    hizoVoto;
    SaldoDeudor;
     //El constructor se ejecuta al cargar la pagina home.html
-    constructor(public navCtrl: NavController,private miProvider:HttpProvider) 
+    constructor(public navCtrl: NavController) 
             {    that=this;
                  this.consulta=new Consulta();
                  this.consulta.buscar().then(snapshot =>{

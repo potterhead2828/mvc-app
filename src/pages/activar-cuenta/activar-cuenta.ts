@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {NavController, NavParams } from 'ionic-angular';
 import { HttpProvider } from "../../providers/http/http";
 import * as firebase from 'firebase';
 import { LoginPage } from "../login/login";
@@ -25,7 +25,7 @@ export class ActivarCuentaPage {
     password:any;
 
     //Constructor se ejecuta cuando la pagina activar-cuenta.html se carga
-    constructor(public navCtrl: NavController, public params: NavParams,private miProvider:HttpProvider) 
+    constructor(public navCtrl: NavController, public params: NavParams) 
               {
                 this.usuario=new Usuario();
                 this.BuscarCuenta();
@@ -39,7 +39,7 @@ volver()
 
 submit()
        { //activar cuenta usuario
-         var passw:any;
+         
          var user;
          this.usuario.login().then(authData => 
                 {  

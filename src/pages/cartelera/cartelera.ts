@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {NavController, NavParams } from 'ionic-angular';
 import { HttpProvider } from "../../providers/http/http";
-import * as firebase from 'firebase';
 import { Cartelera } from "../../app/models/Cartelera";
 /**
  * Generated class for the CarteleraPage page.
@@ -20,7 +19,7 @@ export class CarteleraPage {
      anuncios=[];
      cartelera:Cartelera;
      
-  constructor(public navCtrl: NavController, public navParams: NavParams, private miProvider:HttpProvider) 
+  constructor(public navCtrl: NavController, public navParams: NavParams) 
            {
             this.cartelera=new Cartelera(); 
             this.BuscarAnuncios();

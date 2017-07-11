@@ -25,7 +25,7 @@ export class EditarAnuncioPage {
    f:any;
    cartelera:Cartelera;
    //El constructor se ejecuta al cargar la pagina editar-anuncio.html
-   constructor(public navCtrl: NavController, public params: NavParams, private miProvider:HttpProvider) 
+   constructor(public navCtrl: NavController, public params: NavParams) 
       {  
         this.anuncio=params.get("anuncio");//la pagina modificar cartelera le envia la informacion
                                            //del anuncio a modificar.

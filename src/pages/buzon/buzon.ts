@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {NavController, NavParams } from 'ionic-angular';
 import { HttpProvider } from "../../providers/http/http";
 import { EnviarMensajePage } from "../enviar-mensaje/enviar-mensaje";
 import { EnviarMensajePropPage } from "../enviar-mensaje-prop/enviar-mensaje-prop";
@@ -29,7 +29,7 @@ export class BuzonPage {
      buzonJunta:BuzonJunta;
 
      //El constructor se ejecuta cuando la pagina buzon.html se carga
-     constructor(public navCtrl: NavController, public navParams: NavParams,private miProvider:HttpProvider) 
+     constructor(public navCtrl: NavController, public navParams: NavParams) 
           {
            this.usuario=new Usuario(); 
            this.usuario.setId(firebase.auth().currentUser.uid);
@@ -48,7 +48,7 @@ BuscarMensajes()
 
     var that=this;
     var i=0;
-    var remitenteID;
+    
   
     this.usuario.buscar(this.usuario.getId()).then(snapshot => 
         {
@@ -81,7 +81,7 @@ BuscarMensajes()
                    {
                     snapshot.forEach(function(childSnapshot) 
                             {
-                              var childKey = childSnapshot.key;
+                              
                               var childData = childSnapshot.val();
                               that.mensajes[i]={
                                                  remitente:childData.Remitente,

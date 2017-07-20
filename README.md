@@ -1,26 +1,8 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+##COMUNIDAPP 
+Esta es una aplicacion movil implementada utilizando Ionic y Firebase. 
+Esta aplicacion busca reprentar la interaccion entre los habitantes de un edificio con su respectiva junta de condominio. Por lo cual, tiene dos tipos de sesion: Modo Usuario y Modo Administrador. El modo Usuario es para todo residente fuera de la junta de condominio, el cual podre registrar pagos, enviar mensajes directo a la junta, leer la cartelera, participar en encuestas publicadas y recibir mensajes de la junta de condominio.
 
-## How to use this template
+![Alt text](https://adriana2828blog.files.wordpress.com/2017/07/6-home-pagos.png)
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
-
-### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
-```
-
-Then, to run it, cd into `myBlank` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
-
-Substitute ios for android if not on a Mac.
-
+El Modo Administrador es para residentes pertenecientes a la junta de condominio, alli podran modificar la cartelera, enviar mensaje directo y privado a cualquier propietario, publicar recibos, publicar encuestas y ver el conteo de votos, asi como consultar el buzon de mensajes de la junta.

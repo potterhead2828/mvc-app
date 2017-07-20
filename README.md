@@ -5,7 +5,7 @@ Esta aplicacion busca reprentar la interaccion entre los habitantes de un edific
 
 ## Modo Propietario
 ![Home del modo propietario](https://adriana2828blog.files.wordpress.com/2017/07/2-home-modo-propietario.png) 
-[Menu del modo propietario](https://adriana2828blog.files.wordpress.com/2017/07/1-menu-modo-propietario.png)
+![Menu del modo propietario](https://adriana2828blog.files.wordpress.com/2017/07/1-menu-modo-propietario.png)
 ![Buzon de mensajes del Propietario](https://adriana2828blog.files.wordpress.com/2017/07/3-buzon.png)
 ![Cartelera Informativa](https://adriana2828blog.files.wordpress.com/2017/07/5-cartelera.png)
 ![Enviar Mensaje](https://adriana2828blog.files.wordpress.com/2017/07/4-enviar-mensaje.png)

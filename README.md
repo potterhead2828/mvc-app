@@ -6,7 +6,7 @@ Esta aplicacion busca reprentar la interaccion entre los habitantes de un edific
 ## Modo Propietario
 ###### Home del Modo Propietario
 
-![Home del modo propietario](https://adriana2828blog.files.wordpress.com/2017/07/6-home-pagos.png)
+![Home del modo propietario](https://adriana2828blog.files.wordpress.com/2017/07/2-home-modo-propietario.png)
 
 
 El Modo Administrador es para residentes pertenecientes a la junta de condominio, alli podran modificar la cartelera, enviar mensaje directo y privado a cualquier propietario, publicar recibos, publicar encuestas y ver el conteo de votos, asi como consultar el buzon de mensajes de la junta.

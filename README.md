@@ -1,4 +1,4 @@
-##COMUNIDAPP 
+#COMUNIDAPP 
 Esta es una aplicacion movil implementada utilizando Ionic y Firebase. 
 Esta aplicacion busca reprentar la interaccion entre los habitantes de un edificio con su respectiva junta de condominio. Por lo cual, tiene dos tipos de sesion: Modo Usuario y Modo Administrador. El modo Usuario es para todo residente fuera de la junta de condominio, el cual podre registrar pagos, enviar mensajes directo a la junta, leer la cartelera, participar en encuestas publicadas y recibir mensajes de la junta de condominio.
 

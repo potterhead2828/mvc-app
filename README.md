@@ -21,7 +21,7 @@ El Modo Administrador es para residentes pertenecientes a la junta de condominio
 ![Buzon Junta](https://adriana2828blog.files.wordpress.com/2017/07/8-buzon-junta-condominio.png)
 ![Modificar Cartelera](https://adriana2828blog.files.wordpress.com/2017/07/9-modificar-cartelera.png)
 ![Enviar Mensaje a Propietario](https://adriana2828blog.files.wordpress.com/2017/07/11-enviar-mensaje-a-propietario.png)
-###### La idea es agregar la funcionalidad de poder cargar un pdf, en aras de el documento correspondiente a la factura a pagar.
+###### La idea es agregar la funcionalidad de poder cargar un pdf, en aras de visualizar el documento correspondiente a la factura a pagar.
 ![Publicar Recibo](https://adriana2828blog.files.wordpress.com/2017/07/10-publicar-recibo.png)
 ![Publicar Recibo](https://adriana2828blog.files.wordpress.com/2017/07/10-publicar-recibo-1.png)
 ![Publicar Recibo](https://adriana2828blog.files.wordpress.com/2017/07/10-publicar-recibo-2.png)

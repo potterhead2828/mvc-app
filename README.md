@@ -57,3 +57,6 @@ El usuario recibo de parte de la junta de condominio de su edificio un código, 
 ###### 2.1 Ubicar la terminal en la carpeta en la que queremos crear la app
 ###### 2.2 colocar ionic start NombreDeMiApp blank
 ## 3- Integrar Firebase a la app de Ionic que se acaba de crear
+###### 3.1 Es necesario crear un proyecto en firebase
+###### 3.2 Abrir la consola del proyecto firebase, hacer click donde dice "add firebase to your webapp" y copiar lo que alli se indica
+###### 3.3 Luego

@@ -53,3 +53,7 @@ El usuario recibo de parte de la junta de condominio de su edificio un código, 
 ## 1- Instalar Ionic
 ###### 1.1 Abrir la terminal de node js y colocar el siguiente comando: npm install -g cordova ionic
 ######                  En las MAC hay que colocar-------->        sudo npm install -g cordova ionic
+## 2- Crear una nueva app en Ionic
+###### 2.1 Ubicar la terminal en la carpeta en la que queremos crear la app
+###### 2.2 colocar ionic start NombreDeMiApp blank
+## 3- Integrar Firebase a la app de Ionic que se acaba de crear

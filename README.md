@@ -59,4 +59,28 @@ El usuario recibo de parte de la junta de condominio de su edificio un código, 
 ## 3- Integrar Firebase a la app de Ionic que se acaba de crear
 ###### 3.1 Es necesario crear un proyecto en firebase
 ###### 3.2 Abrir la consola del proyecto firebase, hacer click donde dice "add firebase to your webapp" y copiar lo que alli se indica
-###### 3.3 Luego
+###### 3.3 Luego, hacer lo siguiente:
+
+######                                      3.3.1 npm install -g typescript
+######                                      3.3.2 npm install -g typings
+######                                      3.3.3 npm install firebase --save
+######                                      3.3.4 typings install --save firebase 
+
+###### Luego,
+
+###### En el archivo app.component.ts:
+######                                     3.3.5 import * as firebase 'firebase'; (en la parte donde se hacen los import)
+######                                     3.3.6 Dentro del constructor y despues del this.inicializeApp(); pegar el config de firebase asi:
+
+```javascript
+                                          // Initialize Firebase
+  
+                                             var config = {
+                                                            apiKey: "AIzaSyBg8nijNHgCfE6FNJaD57Hk8PJRle8jRWM",
+                                                            authDomain: "comunidapp-b4c01.firebaseapp.com",    
+                                                            databaseURL: "https://comunidapp-b4c01.firebaseio.com",
+                                                            projectId: "comunidapp-b4c01",
+                                                            storageBucket: "comunidapp-b4c01.appspot.com",
+                                                            messagingSenderId: "103616360136"
+                                                         };
+                                                         firebase.initializeApp(config);

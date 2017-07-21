@@ -45,7 +45,7 @@ El usuario recibe de parte de la junta de condominio de su edificio un código, 
 # ____________________________________________________________________________________________________________________________________
 # Requerimientos para probar la app
 ###### -Node js
-###### -Cuenta de google para la creacion del proyecto Firebase
+###### -Cuenta de google para la creación del proyecto Firebase
 ###### -Cuenta de Ionic para poder probar la app en ionic view.
 
 # Procedimiento para probar la app.
@@ -58,7 +58,7 @@ El usuario recibe de parte de la junta de condominio de su edificio un código, 
 ###### 2.2 colocar ionic start mvc-app blank
 ## 3- Integrar Firebase a la app de Ionic que se acaba de crear
 ###### 3.1 Es necesario crear un proyecto en firebase
-###### 3.2 Abrir la consola del proyecto firebase, hacer click donde dice "add firebase to your webapp" y copiar lo que alli se indica
+###### 3.2 Abrir la consola del proyecto firebase, hacer click donde dice "add firebase to your webapp" y copiar lo que allí se indica
 ###### 3.3 Luego, hacer lo siguiente:
 
 ######                                      3.3.1 npm install -g typescript
@@ -93,7 +93,9 @@ El usuario recibe de parte de la junta de condominio de su edificio un código, 
 ###### - themes
 ###### - providers
 
-## 5- Ubicarse en la base de datos en la pagina de firebase y cargar el archivo comunidapp-b4c01-export.json ubicado en el folder mvc-app de este repositorio, para poblar la base de datos y poder probar la app.
+## 5- Ubicarse en la base de datos en la página de firebase y cargar el archivo comunidapp-b4c01-export.json ubicado en el folder mvc-app de este repositorio, para poblar la base de datos y poder probar la app.
 
 ## 6- Por último, ubicar la terminal en el directorio de la app ionic y tipear: ionic serve -lab
 
+
+#                                                       ¡Enjoy!

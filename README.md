@@ -1,6 +1,6 @@
 # COMUNIDAPP
 
-Esta es una aplicacion movil implementada utilizando Ionic y Firebase. 
+Esta es una aplicación móvil implementada utilizando Ionic y Firebase. 
 Esta aplicacion busca reprentar la interacción entre los habitantes de un edificio con su respectiva junta de condominio. Por lo cual, tiene dos tipos de sesión: Modo Propietario y Modo Administrador. 
 
 ## Modo Propietario
@@ -28,13 +28,13 @@ El Modo Administrador es para residentes pertenecientes a la junta de condominio
 ![Publicar Encuesta](https://adriana2828blog.files.wordpress.com/2017/07/13-consultar-encuesta.png)
 ![Publicar Encuesta](https://adriana2828blog.files.wordpress.com/2017/07/12-publicar-encuesta.png)
 
-###### Login
+## Login
 
 Lo correcto es que la aplicacion tenga un solo boton de login, esto esta por corregirse.
 ![login](https://adriana2828blog.files.wordpress.com/2017/07/0-login-page.png)
 ![login](https://adriana2828blog.files.wordpress.com/2017/07/olvide-contrasencc83a.png)
 
-###### Activación de una cuenta.
+## Activación de una cuenta.
 
 El usuario recibo de parte de la junta de condominio de su edificio un código, con el cual podra activar su cuenta, colocar el email y password que desee y comenzar a utilizar la app.
 

@@ -38,5 +38,5 @@ Lo correcto es que la aplicacion tenga un solo boton de login, esto esta por cor
 
 El usuario recibo de parte de la junta de condominio de su edificio un código, con el cual podra activar su cuenta, colocar el email y password que desee y comenzar a utilizar la app.
 
-![activar cuenta](https://adriana2828blog.files.wordpress.com/2017/07/0-login-page.png)
-![activar cuenta](https://adriana2828blog.files.wordpress.com/2017/07/olvide-contrasencc83a.png)
+![activar cuenta](https://adriana2828blog.files.wordpress.com/2017/07/activar-cuenta1.png)
+![activar cuenta](https://adriana2828blog.files.wordpress.com/2017/07/activar-cuenta.png)

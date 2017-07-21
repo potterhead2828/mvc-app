@@ -41,3 +41,15 @@ El usuario recibo de parte de la junta de condominio de su edificio un código, 
 
 ![activar cuenta](https://adriana2828blog.files.wordpress.com/2017/07/activar-cuenta1.png)
 ![activar cuenta](https://adriana2828blog.files.wordpress.com/2017/07/activar-cuenta.png)
+
+# ____________________________________________________________________________________________________________________________________
+# Requerimientos para probar la app
+## Node js
+## Cuenta de google para la creacion del proyecto Firebase
+## Cuenta de Ionic para poder probar la app en ionic view.
+
+# Procedimiento para probar la app.
+
+## 1- Instalar Ionic
+###### Abrir la terminal de node js y colocar el siguiente comando: npm install -g cordova ionic
+###### En el caso de MAC hay que colocar sudo npm install -g cordova ionic

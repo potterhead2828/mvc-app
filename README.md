@@ -37,7 +37,7 @@ Lo correcto es que la aplicacion tenga un solo boton de login, esto esta por cor
 
 ## Activación de una cuenta.
 
-El usuario recibo de parte de la junta de condominio de su edificio un código, con el cual podra activar su cuenta, colocar el email y password que desee y comenzar a utilizar la app.
+El usuario recibe de parte de la junta de condominio de su edificio un código, con el cual podrá activar su cuenta, colocar el email y password que desee y comenzar a utilizar la app.
 
 ![activar cuenta](https://adriana2828blog.files.wordpress.com/2017/07/activar-cuenta1.png)
 ![activar cuenta](https://adriana2828blog.files.wordpress.com/2017/07/activar-cuenta.png)
@@ -55,7 +55,7 @@ El usuario recibo de parte de la junta de condominio de su edificio un código, 
 ######                  En las MAC hay que colocar-------->        sudo npm install -g cordova ionic
 ## 2- Crear una nueva app en Ionic
 ###### 2.1 Ubicar la terminal en la carpeta en la que queremos crear la app
-###### 2.2 colocar ionic start NombreDeMiApp blank
+###### 2.2 colocar ionic start mvc-app blank
 ## 3- Integrar Firebase a la app de Ionic que se acaba de crear
 ###### 3.1 Es necesario crear un proyecto en firebase
 ###### 3.2 Abrir la consola del proyecto firebase, hacer click donde dice "add firebase to your webapp" y copiar lo que alli se indica
@@ -70,17 +70,26 @@ El usuario recibo de parte de la junta de condominio de su edificio un código, 
 
 ###### En el archivo app.component.ts:
 ######                                     3.3.5 import * as firebase 'firebase'; (en la parte donde se hacen los import)
-######                                     3.3.6 Dentro del constructor y despues del this.inicializeApp(); pegar el config de firebase asi:
+######                                     3.3.6 Dentro del constructor y despues del this.inicializeApp(); pegar el config de firebase asi: (LO SIGUIENTE ES UN EJEMPLO, DEPENDE DE CADA PROYECTO DE FIREBASE)
 
 ```javascript
                                           // Initialize Firebase
   
                                              var config = {
-                                                            apiKey: "AIzaSyBg8nijNHgCfE6FNJaD57Hk8PJRle8jRWM",
-                                                            authDomain: "comunidapp-b4c01.firebaseapp.com",    
-                                                            databaseURL: "https://comunidapp-b4c01.firebaseio.com",
-                                                            projectId: "comunidapp-b4c01",
-                                                            storageBucket: "comunidapp-b4c01.appspot.com",
-                                                            messagingSenderId: "103616360136"
+                                                            apiKey: "AIzaaD57Hk8PJRle8jRWM",
+                                                            authDomain: "comunidapp.firebaseapp.com",    
+                                                            databaseURL: "https://comunidapP.firebaseio.com",
+                                                            projectId: "comunidapp",
+                                                            storageBucket: "comunidapp.appspot.com",
+                                                            messagingSenderId: "1036"
                                                          };
                                                          firebase.initializeApp(config);
+                                                         ```
+## 4- Abrir la carpeta src de este repositorio y en el directorio de la app de Ionic creada previamente, copiar las siguientes carpetas: 
+###### - app
+###### - pages
+###### - themes
+###### - providers
+
+## 5- Por último, ubicar la terminal en el directorio de la app ionic y tipear: ionic serve -lab
+

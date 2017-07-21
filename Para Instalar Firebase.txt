@@ -1,0 +1,35 @@
+
+Esto se ha hecho para instalar firebase y no da error al hacer serve ionic -lab:
+
+1)npm install -g typescript
+2)npm install -g typings
+3)npm install firebase --save
+4)typings install --save firebase 
+
+Luego,
+
+En el archivo app.component.ts:
+
+1) import * as firebase 'firebase'; (en la parte donde se hacen los import)
+2) Dentro del constructor y despues del this.inicializeApp(); pegar el config de firebase asi:
+
+ // Initialize Firebase
+  
+var config = {
+    apiKey: "AIzaSyBg8nijNHgCfE6FNJaD57Hk8PJRle8jRWM",
+    
+authDomain: "comunidapp-b4c01.firebaseapp.com",
+    
+databaseURL: "https://comunidapp-b4c01.firebaseio.com",
+    
+projectId: "comunidapp-b4c01",
+    
+storageBucket: "comunidapp-b4c01.appspot.com",
+   
+messagingSenderId: "103616360136"
+  
+};
+    
+firebase.initializeApp(config);
+    
+

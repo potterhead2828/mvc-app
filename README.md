@@ -1,7 +1,6 @@
 # COMUNIDAPP
 
-Esta es una aplicación móvil implementada utilizando Ionic y Firebase. 
-Esta aplicacion busca reprensentar la interacción entre los habitantes de un edificio con su respectiva junta de condominio. Por lo cual, tiene dos tipos de sesión: Modo Propietario y Modo Administrador. 
+Esta es una aplicación móvil implementada utilizando Ionic y Firebase,la cual busca reprensentar la interacción entre los habitantes de un edificio con su respectiva junta de condominio. Por lo cual, tiene dos tipos de sesión: Modo Propietario y Modo Administrador. 
 
 ## Modo Propietario
 El modo propietario es para todo residente fuera de la junta de condominio, el cual podrá registrar pagos, enviar mensajes directo a la junta, leer la cartelera, participar en encuestas publicadas y recibir mensajes de la junta de condominio.

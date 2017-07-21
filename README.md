@@ -84,12 +84,16 @@ El usuario recibe de parte de la junta de condominio de su edificio un código, 
                                                             messagingSenderId: "1036"
                                                          };
                                                          firebase.initializeApp(config);
-                                                         ```
+
+```
+
 ## 4- Abrir la carpeta src de este repositorio y en el directorio de la app de Ionic creada previamente, copiar las siguientes carpetas: 
 ###### - app
 ###### - pages
 ###### - themes
 ###### - providers
 
-## 5- Por último, ubicar la terminal en el directorio de la app ionic y tipear: ionic serve -lab
+## 5- Ubicarse en la base de datos en la pagina de firebase y cargar el archivo comunidapp-b4c01-export.json ubicado en el folder mvc-app de este repositorio, para poblar la base de datos y poder probar la app.
+
+## 6- Por último, ubicar la terminal en el directorio de la app ionic y tipear: ionic serve -lab
 

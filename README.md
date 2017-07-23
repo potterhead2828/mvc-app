@@ -1,12 +1,14 @@
 # COMUNIDAPP
+## Framework 
+
+Ionic 2 (e inherentemente angular 2) y Firebase
 
 ![Ionic 2](https://s3-ap-southeast-1.amazonaws.com/djamblog/article-061216083709.png)
 ![Angular 2](https://www.codingmart.com/uploads/post/image/5811921c8ca7854ce4d6d5c6/angular2.png)
+
+## Manejador de Base de datos y ORM
 ![Firebase](http://techtechnolog.com/wp-content/uploads/2016/05/a42-718x404.png)
 
-## Framework utilizado
-
-Ionic 2 (e inherentemente angular 2) y Firebase
 
 ## Arquiectura de software
 Corresponde al patrón MVC (MODEL-VIEW-CONTROLLER).

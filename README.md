@@ -85,7 +85,7 @@ El usuario recibe de parte de la junta de condominio de su edificio un código, 
 ###### Luego,
 
 ###### En el archivo app.component.ts:
-######                                     3.3.5 import * as firebase 'firebase'; (en la parte donde se hacen los import)
+######                                     3.3.5 import * as firebase from 'firebase'; (en la parte donde se hacen los import)
 ######                                     3.3.6 Dentro del constructor y despues del this.inicializeApp(); pegar el config de firebase asi: (LO SIGUIENTE ES UN EJEMPLO, DEPENDE DE CADA PROYECTO DE FIREBASE)
 
 ```javascript
